@@ -1,0 +1,15 @@
+export {default as Assessment} from './Assessment';
+export {default as CourseModule} from './CourseModule';
+export {default as ModuleContent} from './ModuleContent';
+// export {default as Project} from './Project';
+export {default as AssignMentor} from './AssignMentor';
+export {default as Notifications} from './Notifications';
+export {default as DeleteDialogue} from './DeleteDialogue';
+export {default as AddUser} from './AddUser';
+// export {default as AddNewUser} from './AddNewUser';
+export {default as AddRole} from './AddRole';
+export {default as AddSchedule} from './AddSchedule';
+// export {default as AddPermission} from './AddPermission';
+export {default as CreateFaculty} from './CreateFaculty';
+export {default as CreateCourses} from './CreateCourses';
+export {default as CreateGroup} from './CreateGroup';

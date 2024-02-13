@@ -1,0 +1,28 @@
+.delete-user {
+   min-width: 33vw;
+   max-height: 35vh;
+   background-color: #fff;
+   border-radius: 12px;
+   h3 {
+      color: #304447;
+      font-weight: 700;
+      font-size: 19px;
+   }
+   p {
+      color: #838e90;
+      font-weight: 300;
+      font-size: 15px;
+   }
+   .cancel {
+      background-color: #fbf1f1;
+      border: 1px solid #de9395;
+      border-radius: 12px;
+      color: #c94b4f;
+   }
+   .deactivate {
+      background: #be272c;
+      border: 1px solid #de9395;
+      border-radius: 12px;
+      color: #fbf1f1;
+   }
+}

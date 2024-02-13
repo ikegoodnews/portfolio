@@ -1,0 +1,41 @@
+.snack-bar {
+   position: absolute;
+   // animation: $slide1;
+   top: 30px;
+   right: 30px;
+   min-height: 50px;
+   width: fit-content;
+   max-width: 370px;
+   overflow: hidden;
+   z-index: 2000;
+   background: #2c2c2c;
+   border: 1px solid rgba(255, 255, 255, 0.2);
+   border-radius: 8px;
+
+   p {
+      margin: 0;
+      color: #fff;
+      font-size: 1rem;
+   }
+
+   // &.success {
+   //    &::after {
+   //       background-color: #17b326;
+   //    }
+   // }
+
+   // &.error {
+   //    &::after {
+   //       // background-color: $error;
+   //       background-color: red;
+   //    }
+   // }
+}
+
+@keyframes hideAnimation {
+   to {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+   }
+}
