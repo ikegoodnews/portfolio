@@ -7,7 +7,7 @@ import {Layout} from '@/_components';
 const Projects = memo(() => {
    return (
       <Layout className="projects position-relative">
-         <div className="container p-0">projects contents</div>
+         <div className="">projects contents</div>
       </Layout>
    );
 });

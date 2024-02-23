@@ -3,7 +3,7 @@ import React from 'react';
 export const getLocationName = (num) => {
    switch (num) {
       case 1:
-         return 'Hello, There';
+         return 'Hi, There';
       case 2:
          return 'About Me';
       case 3:
@@ -20,7 +20,7 @@ export const getLocationName = (num) => {
 export const footerLabel = (num) => {
    switch (num) {
       case 1:
-         return '';
+         return 'Continue To About';
       case 2:
          return 'Continue To Projects';
       case 3:

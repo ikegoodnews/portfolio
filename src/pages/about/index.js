@@ -7,7 +7,7 @@ import React, {memo} from 'react';
 const About = memo(() => {
    return (
       <Layout className="about position-relative">
-         <div className="container p-0">
+         <div className="">
             about contents Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur eligendi laudantium eos velit quisquam, laboriosam
             temporibus voluptas beatae sapiente quam maiores quod ullam nobis? Placeat deserunt aliquam recusandae fugit saepe dolorem nam vero
             pariatur numquam optio, tempore aut ratione qui fugiat totam molestiae quia suscipit explicabo. Placeat temporibus a consequuntur minima

@@ -1,9 +1,19 @@
+import {Facebook, Github, Instagram, Linkedin, Twitter} from '@/_helpers';
+
 export const menuDrop = [
    {id: 1, label: 'home', link: '/', active: 1},
    {id: 2, label: 'about', link: '/about', active: 2},
    {id: 3, label: 'projects', link: '/projects', active: 3},
    {id: 4, label: 'services', link: '/services', active: 4},
    {id: 5, label: 'contact', link: '/contact', active: 5},
+];
+
+export const footerSocial = [
+   {id: 1, title: 'LinkedIn Page', href: 'https://linkedin.com/in/goodnews-ike', icon: <Linkedin />},
+   {id: 2, title: 'Github Page', href: 'https://github.com/goodnewsike', icon: <Github />},
+   {id: 3, title: 'Twitter Page', href: 'https://twitter.com/goodnews-ike', icon: <Twitter />},
+   {id: 4, title: 'Instagram Page', href: 'https://instagram.com/_goodnewsike', icon: <Instagram />},
+   {id: 5, title: 'Facebook Page', href: 'https://facebook.com/Gudniuzplanet', icon: <Facebook />},
 ];
 
 export const experiences = [

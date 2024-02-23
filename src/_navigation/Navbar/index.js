@@ -33,7 +33,7 @@ const Navbar = memo(() => {
    );
 
    return (
-      <nav className={classNames('container-fluid d-flex align-items-center', {fixed: pathname === '/'})}>
+      <nav className={classNames('container-fluid d-flex align-items-center', {})}>
          <div className="container py-4 px-0 d-flex align-items-center justify-content-between">
             <div className="logo">GO.</div>
             <ul className={classNames('menu__dropdown d-flex align-items-center', {})}>
@@ -55,3 +55,4 @@ const Navbar = memo(() => {
 });
 
 export default Navbar;
+// fixed: pathname === '/';
