@@ -40,9 +40,11 @@ const Layout = memo((props) => {
             <Navbar />
             <div className="row m-0 align-items-center justify-content-center">
                <div className="col-md-10">
-                  <Title title={getLocationName(code)} />
-                  <div className="mt-4 pb-4">{props.children}</div>
-                  <Footer label={footerLabel(code)} link={footerLink(code)} />
+                  <div className="layout__content">
+                     <Title title={getLocationName(code)} />
+                     <div className="mt-4 pb-4">{props.children}</div>
+                     <Footer label={footerLabel(code)} link={footerLink(code)} />
+                  </div>
                </div>
             </div>
          </div>

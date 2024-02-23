@@ -79,6 +79,23 @@
       height: 100%;
       margin-bottom: 10rem;
       position: relative;
+
+      .layout__content {
+         overflow-y: scroll;
+         height: calc(100vh - 11rem);
+         &::-webkit-scrollbar {
+            width: 0; /* Safari and Chrome */
+            height: 0; /* Safari and Chrome */
+         }
+         &::-webkit-scrollbar-track {
+            background: transparent;
+         }
+         &::-webkit-scrollbar-thumb {
+            position: absolute;
+            background-color: $color-6;
+            border-radius: 8px;
+         }
+      }
    }
 
    .pageName {

@@ -2,7 +2,7 @@ export const menuDrop = [
    {id: 1, label: 'home', link: '/', active: 1},
    {id: 2, label: 'about', link: '/about', active: 2},
    {id: 3, label: 'projects', link: '/projects', active: 3},
-   {id: 4, label: 'resume', link: '/resume', active: 4},
+   {id: 4, label: 'services', link: '/services', active: 4},
    {id: 5, label: 'contact', link: '/contact', active: 5},
 ];
 
