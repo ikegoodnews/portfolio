@@ -1,0 +1,30 @@
+nav {
+   // position: fixed;
+   width: 100%;
+   height: auto;
+   z-index: 1260;
+   height: 9.8rem;
+   &.fixed {
+      position: fixed;
+   }
+   .logo {
+      font-weight: 700;
+      font-size: 3rem;
+      font-family: 'Abril FatFace';
+   }
+   .menu__dropdown {
+      overflow: hidden;
+      li {
+         font-size: 1rem;
+         color: $color-12;
+         border-radius: 4px;
+         transition: $trans;
+         cursor: pointer;
+         position: relative;
+         &:hover,
+         &.active {
+            color: $color-4;
+         }
+      }
+   }
+}

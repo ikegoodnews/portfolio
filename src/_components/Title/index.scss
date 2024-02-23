@@ -1,0 +1,33 @@
+.section__title {
+   position: relative;
+   display: inline-flex;
+   // margin: 4rem 0rem 1.5rem;
+   margin: 0rem 0rem 1.5rem;
+   &::before {
+      content: '';
+      position: absolute;
+      left: calc(100% + 0.5rem);
+      top: 55%;
+      width: 4rem;
+      height: 7px;
+      background: $color-5;
+      transition: $trans;
+   }
+   h2 {
+      font-size: 3.25rem;
+      font-size: 900;
+      color: $color-12;
+      text-transform: capitalize;
+   }
+   // .title {
+   //    position: absolute;
+   //    top: calc(100% - .3rem);
+   //    left: 3rem;
+   //    text-transform: capitalize;
+   //    font-weight: 900;
+   //    line-height: .7;
+   //    letter-spacing: .35rem;
+   //    color: $color-5;
+   //    opacity: .1;
+   // }
+}

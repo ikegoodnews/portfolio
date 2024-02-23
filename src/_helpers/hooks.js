@@ -38,20 +38,27 @@ export const useMatch = (path) => {
    return pathname === path;
 };
 
-export const useLocationCode = () => {
-   const {pathname, asPath, query} = useRouter();
+export const useRoutesCode = () => {
+   const {asPath, pathname, query} = useRouter();
 
    const home = asPath === '/';
-   const dashboard = asPath === '/dashboard';
-   const students = asPath === '/students';
-   const studentsView = pathname === '/students/[profileUuid]';
+   const about = asPath === '/about';
+   const projects = asPath === '/projects';
+   const services = asPath === '/services';
+   const contact = asPath === '/contact';
 
-   if (home || dashboard) {
+   if (home) {
       return 1;
-   } else if (students || studentsView) {
+   } else if (about) {
       return 2;
-   } else {
+   } else if (projects) {
       return 3;
+   } else if (services) {
+      return 4;
+   } else if (contact) {
+      return 5;
+   } else {
+      return 6;
    }
 };
 

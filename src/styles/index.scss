@@ -1,1 +1,16 @@
 @import './variables';
+
+@import '../_components/Hexagon/index.scss';
+@import '../_components/Layout/index.scss';
+@import '../_components/Modal/index.scss';
+@import '../_components/SkipToContent/index.scss';
+@import '../_components/Title/index.scss';
+
+@import '../_navigation/Navbar/index.scss';
+@import '../_navigation/Footer/index.scss';
+
+@import '../pages/about/index.scss';
+@import '../pages/contact/index.scss';
+@import '../pages/home/index.scss';
+@import '../pages/projects/index.scss';
+@import '../pages/services/index.scss';

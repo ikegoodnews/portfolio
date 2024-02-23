@@ -1,0 +1,13 @@
+{
+   "forms": {
+      "signupForm": {
+         "name": "Sign-up Form",
+         "actions": [{"type": "email", "to": "goodnewsike19@gmail.com"}],
+         "fields": {
+            "name": {"required": "true", "type": "text"},
+            "email": {"required": "true", "type": "email"},
+            "message": {"required": "true", "type": "text"}
+         }
+      }
+   }
+}

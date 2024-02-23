@@ -1,0 +1,51 @@
+.hero__section {
+   width: 100%;
+   height: 100%;
+   // overflow: hidden;
+   .welcome {
+      height: 30rem;
+      // width: 60%;
+      max-width: 90vw;
+      margin: auto;
+      .intro {
+         color: $white;
+         font-weight: 600;
+         font-size: 1.5rem;
+      }
+      .name {
+         font-weight: 600;
+         font-size: 6rem;
+         color: $color-4;
+      }
+      .description {
+         color: $color-3;
+         font-size: 1.1rem;
+         width: 40%;
+      }
+      button {
+         position: relative;
+         border-radius: 2px;
+         padding: 0.5rem 1.5rem;
+         font-size: 0.95rem;
+         font-weight: 600;
+         border: 2px solid $color-4;
+         transition: $trans;
+         &:hover {
+            font-weight: 700;
+            color: $color-1;
+            background: $color-4;
+         }
+         &:before {
+            content: '';
+            position: absolute;
+            // border: 2px solid #777;
+            margin: auto;
+            // background: #777;
+            top: 0.1rem;
+            left: 0.1rem;
+            bottom: 0.1rem;
+            right: 0.1rem;
+         }
+      }
+   }
+}

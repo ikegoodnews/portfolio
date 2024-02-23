@@ -1,98 +1,130 @@
+$trans: 0.3s ease-in;
+
 $white: #ffffff;
 $black: #000000;
-$success: #00f5a6;
-$error: #f51616;
 
-$trans1: 0.15s ease-in;
-$trans2: 0.25s ease-in;
+$color-1: #0b0c10;
+$color-11: #060709;
+$color-2: #1f2833;
+$color-3: #c5c6c7;
+$color-4: #66fcf1;
+$color-5: #45a29e;
+$color-6: rgba(255, 255, 255, 0.1);
+$color-7: rgba(9, 20, 40, 0.74);
+$color-8: rgba(9, 20, 40, 1);
+$color-9: #020a13;
+$color-10: #080f18;
+$color-12: #e1e1e1;
+$color-13: #c6c6c6;
 
-$box-shadow: 0px 16px 32px rgba(189, 189, 189, 0.15);
-$box-shadow2: 0px 16px 32px rgba(189, 189, 189, 0.25);
-$box-shadow3: 0px 16px 32px rgba(189, 189, 189, 0.08);
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      margin-top: 20px;
+   }
 
-$overlay-1: rgba(0, 0, 0, 0.7);
-
-$color-1: #fafafa;
-$color-2: #acb4b5;
-$color-3: #fafafa;
-$color-4: #fafafa;
-$color-5: #fafafa;
-$color-6: #fafafa;
-$color-7: #fafafa;
-$color-8: #fafafa;
-$color-9: #fafafa;
-$color-10: #fafafa;
-$color-11: #fafafa;
-$color-12: #fafafa;
-$color-13: #fafafa;
-$color-14: #fafafa;
-$color-15: #fafafa;
-$color-16: #fafafa;
-$color-17: #fafafa;
-
-:root {
-   --color-scale-gray-5: #484f58;
-   --color-border-default: #30363d;
-   --color-scale-blue-5: #1f6feb;
-   --color-scale-gray-7: #21262d;
+   to {
+      opacity: 1;
+      margin-top: 0;
+   }
 }
+$fade1: fadeIn 0.25s ease-in;
 
-[data-color-mode='dark'][data-dark-theme*='dark'] {
-   --color-workflow-card-connector: var(--color-scale-gray-5);
-   --color-workflow-card-connector-bg: var(--color-scale-gray-5);
-   --color-workflow-card-connector-inactive: var(--borderColor-default, var(--color-border-default));
-   --color-workflow-card-connector-inactive-bg: var(--borderColor-default, var(--color-border-default));
-   --color-workflow-card-connector-highlight: var(--color-scale-blue-5);
-   --color-workflow-card-connector-highlight-bg: var(--color-scale-blue-5);
-   --color-workflow-card-bg: var(--color-scale-gray-7);
-   --color-workflow-card-inactive-bg: var(--bgColor-inset, var(--color-canvas-inset));
-   --color-workflow-card-header-shadow: rgba(27, 31, 35, 0.04);
-   --color-workflow-card-progress-complete-bg: var(--color-scale-blue-5);
-   --color-workflow-card-progress-incomplete-bg: var(--color-scale-gray-6);
-   --color-discussions-state-answered-icon: var(--color-scale-green-3);
-   --color-bg-discussions-row-emoji-box: var(--color-scale-gray-6);
-   --color-notifications-button-text: var(--color-scale-white);
-   --color-notifications-button-hover-text: var(--color-scale-white);
-   --color-notifications-button-hover-bg: var(--color-scale-blue-4);
-   --color-notifications-row-read-bg: var(--bgColor-default, var(--color-canvas-default));
-   --color-notifications-row-bg: var(--bgColor-muted, var(--color-canvas-subtle));
-   --color-icon-directory: var(--fgColor-muted, var(--color-fg-muted));
-   --color-checks-step-error-icon: var(--color-scale-red-4);
-   --color-calendar-halloween-graph-day-L1-bg: #631c03;
-   --color-calendar-halloween-graph-day-L2-bg: #bd561d;
-   --color-calendar-halloween-graph-day-L3-bg: #fa7a18;
-   --color-calendar-halloween-graph-day-L4-bg: #fddf68;
-   --color-calendar-winter-graph-day-L1-bg: #0a3069;
-   --color-calendar-winter-graph-day-L2-bg: #0969da;
-   --color-calendar-winter-graph-day-L3-bg: #54aeff;
-   --color-calendar-winter-graph-day-L4-bg: #b6e3ff;
-   --color-calendar-graph-day-bg: var(--color-scale-gray-8);
-   --color-calendar-graph-day-border: rgba(27, 31, 35, 0.06);
-   --color-calendar-graph-day-L1-bg: #0e4429;
-   --color-calendar-graph-day-L2-bg: #006d32;
-   --color-calendar-graph-day-L3-bg: #26a641;
-   --color-calendar-graph-day-L4-bg: #39d353;
-   --color-calendar-graph-day-L1-border: rgba(255, 255, 255, 0.05);
-   --color-calendar-graph-day-L2-border: rgba(255, 255, 255, 0.05);
-   --color-calendar-graph-day-L3-border: rgba(255, 255, 255, 0.05);
-   --color-calendar-graph-day-L4-border: rgba(255, 255, 255, 0.05);
-   --color-user-mention-fg: var(--color-scale-yellow-0);
-   --color-user-mention-bg: var(--color-scale-yellow-8);
-   --color-dashboard-feed-bg: var(--color-scale-gray-9);
-   --color-mktg-btn-shadow-outline: rgba(255, 255, 255, 0.25) 0 0 0 1px inset;
-   --color-marketing-icon-primary: var(--color-scale-blue-2);
-   --color-marketing-icon-secondary: var(--color-scale-blue-5);
-   --color-project-header-bg: var(--color-scale-gray-9);
-   --color-project-sidebar-bg: var(--color-scale-gray-8);
-   --color-project-gradient-in: var(--color-scale-gray-8);
-   --color-project-gradient-out: rgba(22, 27, 34, 0);
-   --color-diff-blob-selected-line-highlight-mix-blend-mode: screen;
-   --color-checks-donut-error: var(--color-scale-red-4);
-   --color-checks-donut-pending: var(--color-scale-yellow-3);
-   --color-checks-donut-success: var(--color-scale-green-4);
-   --color-checks-donut-neutral: var(--color-scale-gray-3);
-   --color-text-white: var(--color-scale-white);
-}
+// $white: #ffffff;
+// $black: #000000;
+// $success: #00f5a6;
+// $error: #f51616;
+
+// $trans1: 0.15s ease-in;
+// $trans2: 0.25s ease-in;
+
+// $box-shadow: 0px 16px 32px rgba(189, 189, 189, 0.15);
+// $box-shadow2: 0px 16px 32px rgba(189, 189, 189, 0.25);
+// $box-shadow3: 0px 16px 32px rgba(189, 189, 189, 0.08);
+
+// $overlay-1: rgba(0, 0, 0, 0.7);
+
+// $color-1: #fafafa;
+// $color-2: #acb4b5;
+// $color-3: #fafafa;
+// $color-4: #fafafa;
+// $color-5: #fafafa;
+// $color-6: #fafafa;
+// $color-7: #fafafa;
+// $color-8: #fafafa;
+// $color-9: #fafafa;
+// $color-10: #fafafa;
+// $color-11: #fafafa;
+// $color-12: #fafafa;
+// $color-13: #fafafa;
+// $color-14: #fafafa;
+// $color-15: #fafafa;
+// $color-16: #fafafa;
+// $color-17: #fafafa;
+
+// :root {
+//    --color-scale-gray-5: #484f58;
+//    --color-border-default: #30363d;
+//    --color-scale-blue-5: #1f6feb;
+//    --color-scale-gray-7: #21262d;
+// }
+
+// [data-color-mode='dark'][data-dark-theme*='dark'] {
+//    --color-workflow-card-connector: var(--color-scale-gray-5);
+//    --color-workflow-card-connector-bg: var(--color-scale-gray-5);
+//    --color-workflow-card-connector-inactive: var(--borderColor-default, var(--color-border-default));
+//    --color-workflow-card-connector-inactive-bg: var(--borderColor-default, var(--color-border-default));
+//    --color-workflow-card-connector-highlight: var(--color-scale-blue-5);
+//    --color-workflow-card-connector-highlight-bg: var(--color-scale-blue-5);
+//    --color-workflow-card-bg: var(--color-scale-gray-7);
+//    --color-workflow-card-inactive-bg: var(--bgColor-inset, var(--color-canvas-inset));
+//    --color-workflow-card-header-shadow: rgba(27, 31, 35, 0.04);
+//    --color-workflow-card-progress-complete-bg: var(--color-scale-blue-5);
+//    --color-workflow-card-progress-incomplete-bg: var(--color-scale-gray-6);
+//    --color-discussions-state-answered-icon: var(--color-scale-green-3);
+//    --color-bg-discussions-row-emoji-box: var(--color-scale-gray-6);
+//    --color-notifications-button-text: var(--color-scale-white);
+//    --color-notifications-button-hover-text: var(--color-scale-white);
+//    --color-notifications-button-hover-bg: var(--color-scale-blue-4);
+//    --color-notifications-row-read-bg: var(--bgColor-default, var(--color-canvas-default));
+//    --color-notifications-row-bg: var(--bgColor-muted, var(--color-canvas-subtle));
+//    --color-icon-directory: var(--fgColor-muted, var(--color-fg-muted));
+//    --color-checks-step-error-icon: var(--color-scale-red-4);
+//    --color-calendar-halloween-graph-day-L1-bg: #631c03;
+//    --color-calendar-halloween-graph-day-L2-bg: #bd561d;
+//    --color-calendar-halloween-graph-day-L3-bg: #fa7a18;
+//    --color-calendar-halloween-graph-day-L4-bg: #fddf68;
+//    --color-calendar-winter-graph-day-L1-bg: #0a3069;
+//    --color-calendar-winter-graph-day-L2-bg: #0969da;
+//    --color-calendar-winter-graph-day-L3-bg: #54aeff;
+//    --color-calendar-winter-graph-day-L4-bg: #b6e3ff;
+//    --color-calendar-graph-day-bg: var(--color-scale-gray-8);
+//    --color-calendar-graph-day-border: rgba(27, 31, 35, 0.06);
+//    --color-calendar-graph-day-L1-bg: #0e4429;
+//    --color-calendar-graph-day-L2-bg: #006d32;
+//    --color-calendar-graph-day-L3-bg: #26a641;
+//    --color-calendar-graph-day-L4-bg: #39d353;
+//    --color-calendar-graph-day-L1-border: rgba(255, 255, 255, 0.05);
+//    --color-calendar-graph-day-L2-border: rgba(255, 255, 255, 0.05);
+//    --color-calendar-graph-day-L3-border: rgba(255, 255, 255, 0.05);
+//    --color-calendar-graph-day-L4-border: rgba(255, 255, 255, 0.05);
+//    --color-user-mention-fg: var(--color-scale-yellow-0);
+//    --color-user-mention-bg: var(--color-scale-yellow-8);
+//    --color-dashboard-feed-bg: var(--color-scale-gray-9);
+//    --color-mktg-btn-shadow-outline: rgba(255, 255, 255, 0.25) 0 0 0 1px inset;
+//    --color-marketing-icon-primary: var(--color-scale-blue-2);
+//    --color-marketing-icon-secondary: var(--color-scale-blue-5);
+//    --color-project-header-bg: var(--color-scale-gray-9);
+//    --color-project-sidebar-bg: var(--color-scale-gray-8);
+//    --color-project-gradient-in: var(--color-scale-gray-8);
+//    --color-project-gradient-out: rgba(22, 27, 34, 0);
+//    --color-diff-blob-selected-line-highlight-mix-blend-mode: screen;
+//    --color-checks-donut-error: var(--color-scale-red-4);
+//    --color-checks-donut-pending: var(--color-scale-yellow-3);
+//    --color-checks-donut-success: var(--color-scale-green-4);
+//    --color-checks-donut-neutral: var(--color-scale-gray-3);
+//    --color-text-white: var(--color-scale-white);
+// }
 
 // :root {
 //    --max-width: 1100px;
