@@ -1,11 +1,3 @@
-// import {withRouter} from 'next/router';
-// import React, {memo, useEffect, useRef} from 'react';
-// import classNames from 'classnames';
-// // import { PageLayoutProps } from '../../model';
-// import Navbar from './Navbar';
-// import {footerLabel, footerLink, getLocationName, useRoutesCode} from '../_helpers';
-// import {Footer, SkipToContent, Title} from '../_components';
-
 import {footerLabel, footerLink, getLocationName, useRoutesCode} from '@/_helpers';
 import {Footer, Navbar} from '@/_navigation';
 import classNames from 'classnames';
@@ -51,6 +43,13 @@ const Layout = memo((props) => {
             <meta property="og:type" content="website" />
             <meta name="description" content="Hi, I&#x27;m Goodnews Ogechukwu Ike, Software Developer and Frontend Engineer." />
             <meta property="og:description" content="Hi, I&#x27;m Goodnews Ogechukwu Ike, Software Developer and Frontend Engineer." />
+            <link
+               rel="stylesheet"
+               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+               integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+               crossorigin="anonymous"
+               referrerpolicy="no-referrer"
+            />
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="mobile-web-app-capable" content="yes" />
@@ -88,23 +87,32 @@ const Layout = memo((props) => {
             <meta name="apple-mobile-web-app-title" content="Goodnews Ogechukwu Ike" />
             {/* <meta name="next-head-count" content="21" /> */}
          </Head>
+
          <section className="PageLayout container-fluid p-0">
             <div className="PageLayout__Backdrop" />
             <div className="mouse__handle" />
-            <div className={classNames('PageLayout__Contents container px-0', props.className)}>
+            <div className={classNames('PageLayout__Contents', props.className)}>
                <SkipToContent content="main-content" />
                <Navbar />
-               <div className="row m-0 align-items-center justify-content-center">
-                  <div className="col-md-10">
-                     <div className="layout__content">
-                        {router.pathname !== '/' && <Title title={getLocationName(code)} />}
-                        <div className="mt-4 pb-4">{props.children}</div>
-                        <Footer label={footerLabel(code)} link={footerLink(code)} />
+               <div className="container px-0 layout__content">
+                  <div className="row m-0 align-items-center justify-content-center">
+                     <div className="col-md-10">
+                        <div className={classNames('section__wrapper', props.className)}>{props.children}</div>
                      </div>
                   </div>
                </div>
+               <div className={classNames('pageName somePages', {})}>{getLocationName(code)}.</div>
+
+               {/* <div className="layout__content">
+                        {router.pathname !== '/' && <Title title={getLocationName(code)} />}
+                        <div className="mt-4 pb-4">
+                           {props.children}
+                           <div className={classNames('pageName', {somePages: code !== 2 && code !== 5})}>{getLocationName(code)}.</div>
+                        </div>
+                        <Footer label={footerLabel(code)} link={footerLink(code)} />
+                     </div> */}
             </div>
-            <div className={classNames('pageName', {somePages: code !== 2 && code !== 5})}>{getLocationName(code)}.</div>
+            {/* <div className={classNames('pageName', {somePages: code !== 2 && code !== 5})}>{getLocationName(code)}.</div> */}
          </section>
       </main>
    );

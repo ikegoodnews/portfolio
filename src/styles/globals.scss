@@ -19,12 +19,14 @@ html {
       height: 100vh;
       overflow: hidden;
       font-size: 1rem;
+      color: #e6edf3;
       // text-rendering: geometricPrecision;
       font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      // background: $color-1;
+      // background: #010409;
       box-sizing: border-box;
       -moz-osx-font-smoothing: grayscale;
       -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
 
       & > * {
          margin: 0;
@@ -58,8 +60,8 @@ html {
          }
       }
 
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: 4px; /* Firefox */
+      -ms-overflow-style: none;
+      scrollbar-width: 4px;
       &::-webkit-scrollbar {
          width: 6px;
       }
@@ -72,21 +74,10 @@ html {
       }
       @media screen and (max-width: 576px) {
          &::-webkit-scrollbar {
-            width: 0; /* Safari and Chrome */
+            width: 0;
          }
       }
    }
-}
-
-.body {
-   background-color: #000;
-}
-
-.main_wrapper {
-   width: 100%;
-   height: 100vh;
-   overflow: hidden;
-   background: transparent;
 }
 
 a {
@@ -118,7 +109,6 @@ h6 {
    margin: 0;
    padding: 0;
    // line-height: 16px;
-   // font-family: 'ClashDisplay';
 }
 
 ul,
@@ -162,33 +152,3 @@ input,
 textarea {
    outline: none !important;
 }
-
-// .table-responsive {
-//    height: 100%;
-//    -ms-overflow-style: none; /* IE and Edge */
-//    // scrollbar-width: 5px; /* Firefox */
-//    &::-webkit-scrollbar {
-//       height: 0;
-//       width: 0;
-//    }
-//    &::-webkit-scrollbar-track {
-//       background: transparent;
-//    }
-//    &::-webkit-scrollbar-thumb {
-//       background-color: #ddd;
-//       border-radius: 8px;
-//    }
-//    .loader {
-//       min-height: 10rem;
-//    }
-//    table {
-//       tbody {
-//          tr {
-//             background: red !important;
-//             &:hover {
-//                background-color: rgba(0, 0, 0, 0.05);
-//             }
-//          }
-//       }
-//    }
-// }

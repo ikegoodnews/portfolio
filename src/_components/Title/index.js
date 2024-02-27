@@ -1,11 +1,11 @@
 import React, {memo} from 'react';
 
 // eslint-disable-next-line react/display-name
-const Title = memo(({title}) => {
+const Title = memo(({title, label}) => {
    return (
       <div className="section__title">
-         <h2 className="">{title}</h2>
-         {/* <h1 className="title">{title}</h1> */}
+         <p className="">{label}</p>
+         <h2 className="">{title}.</h2>
       </div>
    );
 });

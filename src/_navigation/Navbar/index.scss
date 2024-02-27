@@ -1,16 +1,14 @@
 nav {
-   // position: fixed;
    width: 100%;
    height: auto;
    z-index: 1260;
    height: 9.8rem;
-   &.fixed {
-      position: fixed;
+   &.navHeight {
+      height: 4.8rem !important;
    }
    .logo {
       font-weight: 700;
       font-size: 3rem;
-      // color: $white;
       color: $color-12;
       font-family: 'Abril FatFace';
    }
@@ -28,5 +26,9 @@ nav {
             color: $color-4;
          }
       }
+   }
+   .action__button {
+      color: $color-12;
+      border: 1px solid $color-12;
    }
 }

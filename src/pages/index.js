@@ -1,11 +1,23 @@
-// import Head from 'next/head';
 import {Inter} from 'next/font/google';
-// import { Navbar } from '@/_navigation';
-// import { Hexagon } from '@/_components';
-import Home from './home';
+import {Layout} from '@/_components';
+import {About, Contact, Experience, Hero, Projects, Skills} from '@/_components/Page';
 
 const inter = Inter({subsets: ['latin']});
 
 export default function HomePage() {
-   return <Home />;
+   return (
+      <Layout className="main__home position-relative">
+         <Hero />
+
+         <About />
+
+         <Experience />
+
+         <Skills />
+
+         <Projects />
+
+         <Contact />
+      </Layout>
+   );
 }

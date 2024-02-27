@@ -1,11 +1,12 @@
 import {Facebook, Github, Instagram, Linkedin, Twitter} from '@/_helpers';
 
 export const menuDrop = [
-   {id: 1, label: 'home', link: '/', active: 1},
-   {id: 2, label: 'about', link: '/about', active: 2},
-   {id: 3, label: 'projects', link: '/projects', active: 3},
-   {id: 4, label: 'services', link: '/services', active: 4},
-   {id: 5, label: 'contact', link: '/contact', active: 5},
+   {id: 1, label: 'hero', link: '/#hero', active: 1},
+   {id: 2, label: 'about', link: '/#about', active: 2},
+   {id: 3, label: 'experience', link: '/#experience', active: 3},
+   {id: 4, label: 'skills', link: '/#skills', active: 4},
+   {id: 5, label: 'projects', link: '/#projects', active: 5},
+   {id: 6, label: 'contact', link: '/#contact', active: 6},
 ];
 
 export const footerSocial = [
@@ -14,6 +15,13 @@ export const footerSocial = [
    {id: 3, title: 'Twitter Page', href: 'https://twitter.com/goodnews-ike', icon: <Twitter />},
    {id: 4, title: 'Instagram Page', href: 'https://instagram.com/_goodnewsike', icon: <Instagram />},
    {id: 5, title: 'Facebook Page', href: 'https://facebook.com/Gudniuzplanet', icon: <Facebook />},
+];
+
+export const aboutCards = [
+   {id: 1, icon: 'fa fa-laptop', label: 'frontend developer'},
+   {id: 2, icon: 'fa fa-cogs', label: 'backend developer'},
+   {id: 3, icon: 'fa fa-mobile', label: 'flutter app developer'},
+   {id: 3, icon: 'fa fa-desktop', label: 'desktop app developer'},
 ];
 
 export const experiences = [
@@ -60,44 +68,6 @@ export const experiences = [
          {id: 11, label: 'Developed from scratch multiple dynamic, responsive and browser compatible pages with REACT.js framework.'},
          {id: 12, label: 'Translated UI/UX designs and wireframes into interactive User Interface and Experience on the Web.'},
          {id: 13, label: 'Efficient in building user interfaces for clients without compromising functionality for aesthetics.'},
-      ],
-   },
-   {
-      id: 2,
-      role: 'frontend__developer',
-      title: 'frontend developer',
-      organization: 'zyonel technologies',
-      link: 'https://zyonel.com',
-      organizationDescription: 'a software development company located at gbagada',
-      responsibility: 'Responsible for developing visual and interactive elements that users engage with when using client’s products.',
-      startDate: 'aug 2021',
-      endDate: 'current',
-      techUsed: [
-         {id: 1, label: 'react.js'},
-         {id: 2, label: 'redux'},
-      ],
-      responsibilities: [
-         {id: 1, label: 'developed numerous apps'},
-         {id: 2, label: 'optimized codes'},
-      ],
-   },
-   {
-      id: 2,
-      role: 'frontend___developer',
-      title: 'frontend developer',
-      organization: 'zyonel technologies',
-      link: 'https://zyonel.com',
-      organizationDescription: 'a software development company located at gbagada',
-      responsibility: 'Responsible for developing visual and interactive elements that users engage with when using client’s products.',
-      startDate: 'aug 2021',
-      endDate: 'current',
-      techUsed: [
-         {id: 1, label: 'react.js'},
-         {id: 2, label: 'redux'},
-      ],
-      responsibilities: [
-         {id: 1, label: 'developed numerous apps'},
-         {id: 2, label: 'optimized codes'},
       ],
    },
 ];
