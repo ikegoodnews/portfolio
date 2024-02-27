@@ -3,6 +3,7 @@ nav {
    height: auto;
    z-index: 1260;
    height: 9.8rem;
+   backdrop-filter: blur(15px);
    &.navHeight {
       height: 4.8rem !important;
    }
@@ -12,18 +13,21 @@ nav {
       color: $color-12;
       font-family: 'Abril FatFace';
    }
-   .menu__dropdown {
+   .nav__list {
       overflow: hidden;
       li {
-         font-size: 1rem;
-         color: $color-12;
-         border-radius: 4px;
-         transition: $trans;
-         cursor: pointer;
-         position: relative;
-         &:hover,
-         &.active {
-            color: $color-4;
+         button {
+            font-size: 1rem;
+            color: $color-12;
+            border-radius: 4px;
+            transition: $trans;
+            cursor: pointer;
+            position: relative;
+            text-transform: capitalize;
+            &:hover,
+            &.active {
+               color: $color-4;
+            }
          }
       }
    }

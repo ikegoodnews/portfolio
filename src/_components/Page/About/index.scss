@@ -5,21 +5,33 @@
    .section__description {
       color: #848d97;
       width: 64%;
+      transform: translateX(100px);
+      opacity: 0;
+      transition: 0.15s; // cubic-bezier(0.165, 0.84, 0.44, 1)
+
+      &.show {
+         transform: translateX(0);
+         opacity: 1;
+      }
    }
    .overview__card {
       background-color: rgba(255, 255, 255, 0.01);
-      // background: #0d1117;
-      // background: linear-gradient(90.13deg, #30363d 1.9%, #bf61ff 97.5%);
-      // background: var(--light-grad-pink-blue, radial-gradient(ellipse at 40% 0%, #bf398910 0, transparent 75%)),
-      //    radial-gradient(ellipse at 60% 0%, #096bde10 0, transparent 75%);
+      // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
       box-shadow: $box-shadow3;
-
       border: 1px solid #30363d;
       border-radius: 12px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
+      transform: translateX(100px);
+      opacity: 0;
+      transition: 0.15s; // cubic-bezier(0.165, 0.84, 0.44, 1)
+
+      &.show {
+         transform: translateX(0);
+         opacity: 1;
+      }
       .icon-wrapper {
          height: 60%;
          display: flex;
@@ -43,6 +55,37 @@
          color: $white;
          text-align: center;
          text-transform: capitalize;
+      }
+   }
+   .techs__used {
+      position: relative;
+      .stack {
+         font-size: 0.9rem;
+         border: 1px solid #30363d;
+         border-radius: 4px;
+         background-color: #161b22;
+         background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+         padding: 0.3rem 1rem;
+         text-transform: uppercase;
+      }
+      .nav__container__2 {
+         .prev,
+         .next {
+            position: absolute;
+            height: 100%;
+            // background-color: rgba(0, 0, 0, .5);
+            z-index: 5;
+            top: 0;
+            width: 15rem;
+         }
+         .prev {
+            left: 0;
+            background: linear-gradient(90deg, $color-9, rgba(0, 0, 0, 0) 100%);
+         }
+         .next {
+            right: 0;
+            background: linear-gradient(270deg, $color-9, rgba(0, 0, 0, 0) 100%);
+         }
       }
    }
 }

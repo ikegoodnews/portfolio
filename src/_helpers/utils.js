@@ -1,16 +1,18 @@
 import React from 'react';
 
-export const getLocationName = (num) => {
-   switch (num) {
-      case 1:
+export const getLocationName = (link) => {
+   switch (link) {
+      case '/#hero':
          return 'Hi, There';
-      case 2:
+      case '/#about':
          return 'About Me';
-      case 3:
+      case '/#experience':
+         return 'Experience';
+      case '/#skills':
+         return 'Skills';
+      case '/#projects':
          return 'Projects';
-      case 4:
-         return 'Services';
-      case 5:
+      case '/#contact':
          return 'Contact';
       default:
          return '';

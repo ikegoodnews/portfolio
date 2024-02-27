@@ -1,8 +1,9 @@
+import SectionWrapper from '@/_components/SectionWrapper';
 import React from 'react';
 
 const Hero = () => {
    return (
-      <section id="hero" className="section__wrapper hero__section d-flex align-items-center justify-content-center">
+      <SectionWrapper sectionId="hero" className="hero__section d-flex align-items-center justify-content-center">
          <div className="welcome d-flex flex-column align-items-center justify-content-center">
             <p className="intro">Hello, I&apos;m</p>
             <h1 className="name pt-1 text-center text-uppercase">goodnews ike</h1>
@@ -12,7 +13,7 @@ const Hero = () => {
                achieve your goal in time.
             </p>
          </div>
-      </section>
+      </SectionWrapper>
    );
 };
 

@@ -4,9 +4,9 @@ export const menuDrop = [
    {id: 1, label: 'hero', link: '/#hero', active: 1},
    {id: 2, label: 'about', link: '/#about', active: 2},
    {id: 3, label: 'experience', link: '/#experience', active: 3},
-   {id: 4, label: 'skills', link: '/#skills', active: 4},
-   {id: 5, label: 'projects', link: '/#projects', active: 5},
-   {id: 6, label: 'contact', link: '/#contact', active: 6},
+   // {id: 4, label: 'skills', link: '/#skills', active: 4},
+   {id: 4, label: 'projects', link: '/#projects', active: 4},
+   {id: 5, label: 'contact', link: '/#contact', active: 5},
 ];
 
 export const footerSocial = [
@@ -23,6 +23,8 @@ export const aboutCards = [
    {id: 3, icon: 'fa fa-mobile', label: 'flutter app developer'},
    {id: 3, icon: 'fa fa-desktop', label: 'desktop app developer'},
 ];
+
+export const techStacks = ['html', 'css', 'javascript', 'bootstrap', 'react.js', 'next.js', 'dart', 'flutter', 'electron.js'];
 
 export const experiences = [
    {

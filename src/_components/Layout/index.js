@@ -100,19 +100,10 @@ const Layout = memo((props) => {
                         <div className={classNames('section__wrapper', props.className)}>{props.children}</div>
                      </div>
                   </div>
+                  {/* <Footer label={footerLabel(code)} link={footerLink(code)} /> */}
                </div>
-               <div className={classNames('pageName somePages', {})}>{getLocationName(code)}.</div>
-
-               {/* <div className="layout__content">
-                        {router.pathname !== '/' && <Title title={getLocationName(code)} />}
-                        <div className="mt-4 pb-4">
-                           {props.children}
-                           <div className={classNames('pageName', {somePages: code !== 2 && code !== 5})}>{getLocationName(code)}.</div>
-                        </div>
-                        <Footer label={footerLabel(code)} link={footerLink(code)} />
-                     </div> */}
+               {/* <div className={classNames('pageName somePages', {})}>{getLocationName(props?.pageLink)}.</div> */}
             </div>
-            {/* <div className={classNames('pageName', {somePages: code !== 2 && code !== 5})}>{getLocationName(code)}.</div> */}
          </section>
       </main>
    );

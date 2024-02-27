@@ -1,6 +1,6 @@
 import {Inter} from 'next/font/google';
 import {Layout} from '@/_components';
-import {About, Contact, Experience, Hero, Projects, Skills} from '@/_components/Page';
+import {About, Contact, Experience, Hero, Projects} from '@/_components/Page';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -12,8 +12,6 @@ export default function HomePage() {
          <About />
 
          <Experience />
-
-         <Skills />
 
          <Projects />
 
