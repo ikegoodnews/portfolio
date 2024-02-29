@@ -1,4 +1,5 @@
 import {Facebook, Github, Instagram, Linkedin, Twitter} from '@/_helpers';
+import project1 from '../../public/_assets/images/project1.jpg';
 
 export const menuDrop = [
    {id: 1, label: 'hero', link: '/#hero', active: 1},
@@ -25,6 +26,57 @@ export const aboutCards = [
 ];
 
 export const techStacks = ['html', 'css', 'javascript', 'bootstrap', 'react.js', 'next.js', 'dart', 'flutter', 'electron.js'];
+
+export const projects = [
+   {
+      id: 1,
+      img: project1,
+      title: 'project 1',
+      date: Date.now(),
+      description:
+         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga deserunt pariatur possimus voluptates aspernatur hic autem omnis est beatae architecto optio necessitatibus dolor adipisci sapiente eos, voluptatem doloremque laborum ipsum fugiat quos! Iste ea ut accusantium numquam maxime quae quisquam consequuntur. Mollitia neque sapiente consequatur magni illo, temporibus iusto assumenda.',
+   },
+   {
+      id: 2,
+      img: project1,
+      title: 'project 1',
+      date: Date.now(),
+      description:
+         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga deserunt pariatur possimus voluptates aspernatur hic autem omnis est beatae architecto optio necessitatibus dolor adipisci sapiente eos, voluptatem doloremque laborum ipsum fugiat quos! Iste ea ut accusantium numquam maxime quae quisquam consequuntur. Mollitia neque sapiente consequatur magni illo, temporibus iusto assumenda.',
+   },
+   {
+      id: 3,
+      img: project1,
+      title: 'project 1',
+      date: Date.now(),
+      description:
+         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga deserunt pariatur possimus voluptates aspernatur hic autem omnis est beatae architecto optio necessitatibus dolor adipisci sapiente eos, voluptatem doloremque laborum ipsum fugiat quos! Iste ea ut accusantium numquam maxime quae quisquam consequuntur. Mollitia neque sapiente consequatur magni illo, temporibus iusto assumenda.',
+   },
+   {
+      id: 4,
+      img: project1,
+      title: 'project 1',
+      date: Date.now(),
+      description:
+         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga deserunt pariatur possimus voluptates aspernatur hic autem omnis est beatae architecto optio necessitatibus dolor adipisci sapiente eos, voluptatem doloremque laborum ipsum fugiat quos! Iste ea ut accusantium numquam maxime quae quisquam consequuntur. Mollitia neque sapiente consequatur magni illo, temporibus iusto assumenda.',
+   },
+   {
+      id: 5,
+      img: project1,
+      title: 'project 5',
+      date: Date.now(),
+      description:
+         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga deserunt pariatur possimus voluptates aspernatur hic autem omnis est beatae architecto optio necessitatibus dolor adipisci sapiente eos, voluptatem doloremque laborum ipsum fugiat quos! Iste ea ut accusantium numquam maxime quae quisquam consequuntur. Mollitia neque sapiente consequatur magni illo, temporibus iusto assumenda.',
+   },
+   {
+      id: 6,
+      img: project1,
+      title: 'project 6',
+      date: Date.now(),
+      description:
+         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga deserunt pariatur possimus voluptates aspernatur hic autem omnis est beatae architecto optio necessitatibus dolor adipisci sapiente eos, voluptatem doloremque laborum ipsum fugiat quos! Iste ea ut accusantium numquam maxime quae quisquam consequuntur. Mollitia neque sapiente consequatur magni illo, temporibus iusto assumenda.',
+   },
+];
 
 export const experiences = [
    {

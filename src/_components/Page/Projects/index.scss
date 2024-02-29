@@ -1,0 +1,29 @@
+.projects__section {
+   .projectCard {
+      width: 100%;
+      aspect-ratio: 16 / 12;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #222;
+      --height: 80%;
+      .img_wrapper {
+         height: var(--height);
+         width: 100%;
+         transition: height 0.2s ease-in-out;
+      }
+      .details {
+         height: calc(100% - var(--height));
+         position: relative;
+         background-color: #121212;
+         .date {
+            position: absolute;
+            top: -1.5rem;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+         }
+      }
+      &:hover {
+         --height: 20%;
+      }
+   }
+}

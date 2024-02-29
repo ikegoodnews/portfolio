@@ -5,6 +5,8 @@ import {useRouter} from 'next/router';
 import classNames from 'classnames';
 import Link from 'next/link';
 
+// import CV from '../../../public/_assets/pdf/CV_GOODNEWS_OGECHUKWU_IKE.pdf';
+
 // eslint-disable-next-line react/display-name
 const Navbar = memo(() => {
    const code = useRoutesCode();
@@ -64,7 +66,16 @@ const Navbar = memo(() => {
                      </li>
                   ))}
                </ul>
-               <button className="action__button">click me.</button>
+               <div className="">
+                  <a
+                     href="./_assets/pdf/CV_GOODNEWS_OGECHUKWU_IKE.pdf"
+                     target="_blank"
+                     alt="GOODNEWS OGECHUKWU IKE CV"
+                     rel="noopener noreferrer"
+                     className="action__button">
+                     <i class="fa fa-download" aria-hidden="true"></i> CV.
+                  </a>
+               </div>
             </div>
          </div>
       </nav>

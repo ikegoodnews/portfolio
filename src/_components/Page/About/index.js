@@ -8,8 +8,6 @@ import React, {useEffect} from 'react';
 const About = () => {
    useEffect(() => {
       const cards = document.querySelectorAll('.about__section .observe');
-      console.log(`cards=====>`, cards);
-      console.log(`cards?.length=====>`, cards?.length);
 
       const observer = new IntersectionObserver(
          (entries) => {

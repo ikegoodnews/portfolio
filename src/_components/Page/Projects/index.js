@@ -1,5 +1,8 @@
 import SectionWrapper from '@/_components/SectionWrapper';
 import Title from '@/_components/Title';
+import {projects} from '@/_constants';
+import {format} from 'date-fns';
+import Image from 'next/image';
 import React from 'react';
 
 const Projects = () => {
@@ -14,14 +17,38 @@ const Projects = () => {
             </p>
 
             <div className="row mt-md-5 mt-4">
-               {/* {aboutCards?.map((card, i) => (
-                  <div key={i} className="col-lg-3 col-md-4 col-sm-6 mb-4 px-3">
-                     <div className="overview__card observe h-100 py-4 px-lg-5 px-4">
-                        <i className={classNames(`icon-wrapper ${card.icon}`, numToString(i + 1, true))} aria-hidden="true"></i>
-                        <h5 className="overview__card--title mt-4 mb-3">{card.label}</h5>
+               {projects?.slice(0, 4)?.map((project, i) => (
+                  <div key={i} className="col-lg-6 p-md-4 px-2 mb-md-0 mb-4">
+                     <div className="projectCard h-100">
+                        <div className="img_wrapper">
+                           <Image
+                              src={project?.img}
+                              className="d-block w-100"
+                              alt={`${project?.title}-artwork`}
+                              quality={100}
+                              height={100}
+                              width={100}
+                              priority
+                           />
+                        </div>
+                        <div className="details p-4">
+                           <div className="date">{format(new Date(project?.date), 'EE, dd MMM yyyy')}</div>
+                           <div className="links">
+                              <button className="">
+                                 <i class="fa fa-github" aria-hidden="true"></i>
+                                 source code.
+                              </button>
+                              <button className="">
+                                 <i class="fa fa-external-link" aria-hidden="true"></i>
+                                 view live
+                              </button>
+                           </div>
+                           <h5 className="project__title">{project?.title}</h5>
+                           <p className="project__description">{project?.description}</p>
+                        </div>
                      </div>
                   </div>
-               ))} */}
+               ))}
             </div>
          </div>
       </SectionWrapper>

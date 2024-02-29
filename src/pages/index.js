@@ -11,9 +11,9 @@ export default function HomePage() {
 
          <About />
 
-         <Experience />
-
          <Projects />
+
+         <Experience />
 
          <Contact />
       </Layout>
