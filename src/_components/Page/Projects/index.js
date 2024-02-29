@@ -58,7 +58,7 @@ const Projects = () => {
                                     <button className="next"></button>
                                  </div>
                               </div>
-                              <div className="links pt-2 d-flex align-items-center justify-content-between">
+                              <div className="links pt-3 d-flex align-items-center justify-content-between">
                                  <button className="click">
                                     <i class="fa fa-github me-2" aria-hidden="true"></i>
                                     source code.
