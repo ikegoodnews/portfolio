@@ -78,8 +78,9 @@
                color: #848d97;
                border: 1px solid #30363d;
                border-radius: 2px;
-               background-color: #161b22;
-               background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+               // background-color: #161b22;
+               // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+               box-shadow: $box-shadow-inset;
                padding: 0.3rem 0.7rem;
                text-transform: uppercase;
             }
