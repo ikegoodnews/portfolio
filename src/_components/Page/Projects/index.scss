@@ -1,11 +1,22 @@
 .projects__section {
+   .bg__layer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 7%;
+      right: 5%;
+      // background-color: #161b22;
+      box-shadow: $box-shadow-inset;
+   }
    .projectCard {
+      --height: 80%;
+      position: relative;
       width: 100%;
       aspect-ratio: 16 / 12;
-      border-radius: 8px;
       overflow: hidden;
-      background-color: #222;
-      --height: 80%;
+      // border-radius: 8px;
+      background-color: #000000;
       .img_wrapper {
          height: var(--height);
          width: 100%;
@@ -14,16 +25,126 @@
       .details {
          height: calc(100% - var(--height));
          position: relative;
-         background-color: #121212;
+         background-color: #00000056;
          .date {
             position: absolute;
-            top: -1.5rem;
+            top: -1.71rem;
             left: 0;
-            background-color: rgba(255, 255, 255, 0.5);
+            font-size: 0.8rem;
+            background-color: $color-5;
+            color: $white;
+         }
+         .project__title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-transform: capitalize;
+         }
+         .project__description {
+            --line-count: 4;
+            pointer-events: none;
+            opacity: 0;
+            font-size: 1rem;
+            color: #848d97;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: var(--line-count);
+            line-clamp: var(--line-count);
+            -webkit-box-orient: vertical;
+            transition: opacity 0.15s ease-in;
+         }
+         .links {
+            .click {
+               font-size: 0.7rem;
+               text-transform: uppercase;
+               color: $color-5;
+               transition: 0.15s ease-in;
+               &:hover {
+                  text-decoration: underline;
+               }
+               i {
+                  font-size: 0.9rem;
+                  color: $color-5;
+                  &.fa-github {
+                     font-size: 1rem;
+                  }
+               }
+            }
+         }
+         .techs__used {
+            position: relative;
+            .stack {
+               font-size: 0.7rem;
+               font-weight: 600;
+               color: #848d97;
+               border: 1px solid #30363d;
+               border-radius: 2px;
+               background-color: #161b22;
+               background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+               padding: 0.3rem 0.7rem;
+               text-transform: uppercase;
+            }
+            .nav__container__2 {
+               .prev,
+               .next {
+                  position: absolute;
+                  height: 100%;
+                  // background-color: rgba(0, 0, 0, .5);
+                  z-index: 5;
+                  top: 0;
+                  width: 5rem;
+               }
+               .prev {
+                  left: 0;
+                  background: linear-gradient(90deg, #000000, rgba(0, 0, 0, 0) 100%);
+               }
+               .next {
+                  right: 0;
+                  background: linear-gradient(270deg, #000000, rgba(0, 0, 0, 0) 100%);
+               }
+            }
          }
       }
       &:hover {
          --height: 20%;
+         .details {
+            .project__description {
+               opacity: 1;
+               pointer-events: all;
+            }
+         }
+      }
+      @media screen and (max-width: 490px) {
+         .details {
+            .date {
+               font-size: 0.6rem;
+               top: -1.38rem;
+            }
+            .project__title {
+               font-size: 1rem;
+            }
+            .project__description {
+               --line-count: 3;
+               font-size: 0.8rem;
+            }
+            .techs__used {
+               .stack {
+                  font-size: 0.55rem;
+                  padding: 0.15rem 0.5rem;
+               }
+            }
+            .links {
+               .click {
+                  font-size: 0.55rem;
+               }
+            }
+         }
+      }
+      @media screen and (max-width: 490px) {
+         .details {
+            .project__description {
+               --line-count: 2;
+            }
+         }
       }
    }
 }

@@ -30,7 +30,7 @@ const About = () => {
 
    return (
       <SectionWrapper sectionId="about" className="about__section py-lg-5 py-4">
-         <div className="">
+         <div className="w-100">
             <Title label="introduction" title="overview" />
             <p className="section__description observe mt-3">
                I&apos;m a skilled software developer with experience in Dart and JavaScript, and expertise in frameworks like Next.js, React.js,
@@ -42,14 +42,14 @@ const About = () => {
                {aboutCards?.map((card, i) => (
                   <div key={i} className="col-lg-3 col-md-4 col-sm-6 mb-4 px-3">
                      <div className="overview__card observe h-100 py-4 px-lg-5 px-4">
-                        <i className={classNames(`icon-wrapper ${card.icon}`, numToString(i + 1, true))} aria-hidden="true"></i>
+                        <i className={classNames(`icon__wrapper ${card.icon}`, numToString(i + 1, true))} aria-hidden="true"></i>
                         <h5 className="overview__card--title mt-4 mb-3">{card.label}</h5>
                      </div>
                   </div>
                ))}
             </div>
 
-            <div className="techs__used mt-5">
+            <div className="techs__used mt-5 overflow-hidden">
                <div className="d-flex align-items-center mb-4">
                   {techStacks?.map((stack, i) => (
                      <div key={i} className="stack me-4">

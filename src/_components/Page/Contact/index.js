@@ -5,7 +5,7 @@ import React from 'react';
 const Contact = () => {
    return (
       <SectionWrapper sectionId="contact" className="contact__section py-lg-5 py-4">
-         <div className="">
+         <div className="w-100">
             <Title tClassName="text-center" label="get in touch" title="contact" />
          </div>
       </SectionWrapper>
