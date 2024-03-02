@@ -127,7 +127,7 @@
                font-size: 1rem;
             }
             .project__description {
-               --line-count: 3;
+               // --line-count: 2;
                font-size: 0.8rem;
             }
             .techs__used {
@@ -141,12 +141,113 @@
                   font-size: 0.55rem;
                }
             }
+            // .project__description {
+            //    --line-count: 4;
+            // }
          }
       }
-      @media screen and (max-width: 490px) {
+      @media (max-width: 1060px) {
+         .details {
+            .project__description {
+               line-height: 1.4;
+            }
+         }
+      }
+      @media (min-width: 992px) and (max-width: 1060px) {
+         .details {
+            .project__description {
+               --line-count: 3;
+            }
+         }
+      }
+      @media (max-width: 991px) {
+         .details {
+            .project__description {
+               --line-count: 12;
+            }
+         }
+      }
+      @media (max-width: 940px) {
+         .details {
+            .project__description {
+               --line-count: 10;
+            }
+         }
+      }
+      @media (min-width: 768px) and (max-width: 850px) {
+         .details {
+            .project__description {
+               --line-count: 8;
+            }
+         }
+      }
+      @media (max-width: 767px) {
+         .details {
+            .project__description {
+               --line-count: 12;
+            }
+         }
+      }
+      @media (max-width: 745px) {
+         .details {
+            .project__description {
+               --line-count: 10;
+            }
+         }
+      }
+      @media (max-width: 670px) {
+         .details {
+            .project__description {
+               --line-count: 8;
+            }
+         }
+      }
+      @media (max-width: 590px) {
+         .details {
+            .project__description {
+               --line-count: 6;
+            }
+         }
+      }
+      @media (max-width: 490px) {
+         .details {
+            .project__description {
+               --line-count: 8;
+            }
+         }
+      }
+      @media (max-width: 478px) {
+         .details {
+            .project__description {
+               --line-count: 6;
+            }
+         }
+      }
+      @media (max-width: 420px) {
+         .details {
+            .project__description {
+               --line-count: 4;
+            }
+         }
+      }
+      @media (max-width: 364px) {
+         .details {
+            .project__description {
+               --line-count: 3;
+            }
+         }
+      }
+      @media (max-width: 320px) {
          .details {
             .project__description {
                --line-count: 2;
+            }
+         }
+      }
+      @media (max-width: 284px) {
+         .details {
+            .project__description {
+               --line-count: 1;
             }
          }
       }

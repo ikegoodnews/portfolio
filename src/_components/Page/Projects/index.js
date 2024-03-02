@@ -39,13 +39,13 @@ const Projects = () => {
                                  title={project?.title}
                                  data-toggle="tooltip"
                                  data-placement="top"
-                                 className="project__title pb-sm-3 pb-2 text-truncate">
+                                 className="project__title pb-xl-3 pb-2 text-truncate">
                                  {project?.title}
                               </h5>
                               <p title={project?.description} data-toggle="tooltip" data-placement="top" className="project__description">
                                  {project?.description}
                               </p>
-                              <div className="techs__used overflow-hidden mb-2 mt-sm-4 mt-3">
+                              <div className="techs__used overflow-hidden mb-2 mt-xl-4 mt-3">
                                  <div className="d-flex align-items-center">
                                     {techStacks?.map((stack, i) => (
                                        <div key={i} className="stack me-2">
@@ -58,7 +58,7 @@ const Projects = () => {
                                     <button className="next"></button>
                                  </div>
                               </div>
-                              <div className="links pt-3 d-flex align-items-center justify-content-between">
+                              <div className="links pt-xl-3 pt-1 d-flex align-items-center justify-content-between">
                                  <button className="click">
                                     <i class="fa fa-github me-2" aria-hidden="true"></i>
                                     source code.
