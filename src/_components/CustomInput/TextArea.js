@@ -1,28 +1,38 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {withFormsy} from 'formsy-react';
 import classNames from 'classnames';
 // import PropTypes from 'prop-types';
 
 /// ICON IMPORTS ///
 import ErrorIcon from '../../../public/_assets/icons/Error.svg';
+import {AppEmitter} from '@/_controllers/EventEmitter';
 
-export const TextArea = withFormsy((props) => {
+export const TextArea = (props) => {
+   const [value, setValue] = useState('');
    const [focused, setFocused] = useState(false);
    const changeValue = (e) => {
       // setValue() will set the value of the component, which in
       // turn will validate it and the rest of the form
       // Important: Don't skip this step. This pattern is required
       // for Formsy to work.
-      props.setValue(e.currentTarget.value);
+      setValue(e.currentTarget.value);
       typeof props.onValueChange === 'function' && props.onValueChange(e.currentTarget.value);
    };
+
+   useEffect(() => {
+      const listener = AppEmitter.addListener('email_success', () => {
+         setValue('');
+      });
+
+      return () => listener.remove();
+   }, []);
 
    // props.errorMessage comes only if the component is invalid
    const errorMessage = props.errorMessage || props.valError;
 
    return (
       <div className={classNames('text-area text-input', props.className)}>
-         <div className={classNames('wrapper position-relative', {focus: focused, filled: !!props.value})}>
+         <div className={classNames('wrapper position-relative', {focus: focused, filled: !!value})}>
             <label htmlFor={props.name}>{props.label}</label>
             <textarea
                id={props.id}
@@ -30,7 +40,7 @@ export const TextArea = withFormsy((props) => {
                className="w-100"
                onFocus={() => setFocused(true)}
                onBlur={() => setFocused(false)}
-               value={props.value || ''}
+               value={value || ''}
                onChange={changeValue}
                required={props.required}
                disabled={props.disabled}
@@ -42,13 +52,13 @@ export const TextArea = withFormsy((props) => {
          </div>
          {!!errorMessage && !props.isPristine && (
             <div className="error d-flex align-items-center">
-               <ErrorIcon />
+               {/* <ErrorIcon /> */}
                <p style={{color: 'red'}}>{errorMessage}</p>
             </div>
          )}
       </div>
    );
-});
+};
 
 // TextArea.propTypes = {
 //    id: PropTypes.string,

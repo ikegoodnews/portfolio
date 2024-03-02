@@ -26,6 +26,7 @@
          height: calc(100% - var(--height));
          position: relative;
          background-color: #00000056;
+         // background-color: $color-5;
          .date {
             position: absolute;
             top: -1.71rem;
@@ -56,7 +57,9 @@
             .click {
                font-size: 0.7rem;
                text-transform: uppercase;
-               color: $color-5;
+               color: $color-4;
+               font-weight: 400;
+               letter-spacing: 1px;
                transition: 0.15s ease-in;
                &:hover {
                   text-decoration: underline;

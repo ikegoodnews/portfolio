@@ -1,0 +1,67 @@
+.experience__section {
+   .job__details {
+      .duration {
+      }
+      .external__link {
+         font-size: 0.8rem;
+      }
+      .company__site {
+         transition: text-decoration 0.2s ease-in;
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+      .company__description {
+         color: #848d97;
+         text-align: justify;
+         font-size: 0.9rem;
+      }
+   }
+   .job__description {
+      position: relative;
+      &::before,
+      &::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         background-color: #fff;
+      }
+      &::before {
+         --size: 20px;
+         height: var(--size);
+         width: var(--size);
+         border-radius: 50%;
+         left: -2.25rem;
+         border: 3px solid $color-4;
+      }
+      &::after {
+         left: -1.7rem;
+         width: 2px;
+         height: 100%;
+      }
+      .occupation {
+         text-transform: capitalize;
+      }
+      .company {
+         text-transform: capitalize;
+      }
+      ul {
+         li {
+            font-size: 0.9rem;
+            color: #848d97;
+            position: relative;
+            &::before {
+               --value: 12px;
+               content: '';
+               position: absolute;
+               left: -2rem;
+               top: 0.3rem;
+               height: var(--value);
+               width: var(--value);
+               border-radius: 50%;
+               background-color: $color-4;
+            }
+         }
+      }
+   }
+}

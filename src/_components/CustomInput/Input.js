@@ -1,13 +1,12 @@
-import React, {useState} from 'react';
-import {withFormsy} from 'formsy-react';
+import React, {useEffect, useState} from 'react';
 import classNames from 'classnames';
-// import PropTypes from 'prop-types';
-// import {debounce} from '@/_helpers';
+import {AppEmitter} from '@/_controllers/EventEmitter';
 
 /// ICON IMPORTS ///
-import ErrorIcon from '../../../public/_assets/icons/Error.svg';
+// import ErrorIcon from '../../../public/_assets/icons/Error.svg';
 
-export const TextInput = withFormsy((props) => {
+export const TextInput = (props) => {
+   const [value, setValue] = useState('');
    const [focused, setFocused] = useState(false);
 
    const changeValue = (e) => {
@@ -18,9 +17,17 @@ export const TextInput = withFormsy((props) => {
       if (props.valError !== '') {
          typeof props.clearError === 'function' && props.clearError();
       }
-      props.setValue(e.currentTarget.value);
+      setValue(e.currentTarget.value);
       typeof props.onValueChange === 'function' && props.onValueChange(e.currentTarget.value);
    };
+
+   useEffect(() => {
+      const listener = AppEmitter.addListener('email_success', () => {
+         setValue('');
+      });
+
+      return () => listener.remove();
+   }, []);
 
    // const changeValue = debounce((e) => _changeValue(e), 1000);
 
@@ -29,7 +36,7 @@ export const TextInput = withFormsy((props) => {
 
    return (
       <div className={classNames('text-input', props.className)}>
-         <div className={classNames('wrapper position-relative', {focus: focused, filled: !!props.value})}>
+         <div className={classNames('wrapper position-relative', {focus: focused, filled: !!value})}>
             <label htmlFor={props.name}>{props.label}</label>
             {props.prefix}
             {props.leftIcon}
@@ -41,7 +48,7 @@ export const TextInput = withFormsy((props) => {
                onChange={changeValue}
                required={props.required}
                disabled={props.disabled}
-               value={props.value || ''}
+               value={value || ''}
                autoFocus={props.autoFocus}
                placeholder={props.placeholder}
                onBlur={() => setFocused(false)}
@@ -55,23 +62,10 @@ export const TextInput = withFormsy((props) => {
          </div>
          {!!errorMessage && !props.isPristine && (
             <div className="error d-flex align-items-center">
-               <ErrorIcon />
+               {/* <ErrorIcon /> */}
                <p style={{color: 'red'}}>{errorMessage}</p>
             </div>
          )}
       </div>
    );
-});
-
-// TextInput.propTypes = {
-//    id: PropTypes.string,
-//    name: PropTypes.string.isRequired,
-//    className: PropTypes.string,
-//    type: PropTypes.string,
-//    value: PropTypes.string,
-//    placeholder: PropTypes.string,
-//    required: PropTypes.bool,
-//    disabled: PropTypes.bool,
-//    autoFocus: PropTypes.bool,
-//    autoComplete: PropTypes.string,
-// };
+};

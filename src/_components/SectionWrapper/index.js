@@ -6,7 +6,7 @@ import React, {memo} from 'react';
 // eslint-disable-next-line react/display-name
 const SectionWrapper = memo((props) => {
    const router = useRouter();
-   console.log(`router.asPath=====>`, router.asPath);
+   // console.log(`router.asPath=====>`, router.asPath);
 
    return (
       <section id={props.sectionId} className={classNames('section__wrapper', props.className)}>
