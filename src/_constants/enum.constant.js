@@ -4,9 +4,9 @@ import project1 from '../../public/_assets/images/project1.jpg';
 export const menuDrop = [
    {id: 1, label: 'hero', link: '/#hero', active: 1},
    {id: 2, label: 'about', link: '/#about', active: 2},
-   {id: 3, label: 'experience', link: '/#experience', active: 3},
    // {id: 4, label: 'skills', link: '/#skills', active: 4},
-   {id: 4, label: 'projects', link: '/#projects', active: 4},
+   {id: 3, label: 'projects', link: '/#projects', active: 3},
+   {id: 4, label: 'experience', link: '/#experience', active: 4},
    {id: 5, label: 'contact', link: '/#contact', active: 5},
 ];
 
