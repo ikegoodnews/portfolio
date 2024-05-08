@@ -1,11 +1,16 @@
 nav {
    width: 100%;
-   height: auto;
    z-index: 1260;
    height: 9.8rem;
-   backdrop-filter: blur(15px);
-   &.navHeight {
-      height: 4.8rem !important;
+   &.active {
+      // backdrop-filter: blur(15px);
+      visibility: visible;
+      transition: 0.3s ease-in;
+   }
+   &.hidden {
+      visibility: hidden;
+      transition: 0.2s ease-out;
+      transform: translateY(-100%);
    }
    .logo {
       font-weight: 700;
@@ -16,7 +21,7 @@ nav {
    .nav__list {
       overflow: hidden;
       li {
-         button {
+         a {
             font-size: 1rem;
             color: $color-12;
             border-radius: 4px;

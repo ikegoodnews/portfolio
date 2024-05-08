@@ -42,12 +42,14 @@ export const useRoutesCode = () => {
    const {asPath, pathname, query} = useRouter();
 
    const home = asPath === '/';
+   const home2 = asPath === '/#!';
+   const home3 = asPath === '/home';
    const about = asPath === '/about';
    const projects = asPath === '/projects';
-   const services = asPath === '/services';
+   const services = asPath === '/resume';
    const contact = asPath === '/contact';
 
-   if (home) {
+   if (home || home2 || home3) {
       return 1;
    } else if (about) {
       return 2;
@@ -65,7 +67,7 @@ export const useRoutesCode = () => {
 export const useIsAuthRoute = () => {
    const {pathname} = useRouter();
 
-   const routes = ['/login', '/forgot-password', '/user/reset/token/:token', '/update-password', '/users/[email]/verify/[verification_code]'];
+   const routes = ['/login', '/forgot-password'];
 
    const checker = (route) => routes.indexOf(route) !== -1;
 

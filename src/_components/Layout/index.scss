@@ -65,11 +65,11 @@
          animation: mouseAnimation2 0.5s infinite alternate;
       }
       &.expand {
-         animation: mouseAnimation3 0.5s forwards;
          border: 1px solid red;
          display: flex;
          align-items: center;
          justify-content: center;
+         animation: mouseAnimation3 0.5s forwards;
       }
    }
 
@@ -79,22 +79,33 @@
       height: 100%;
       // margin-bottom: 10rem;
       position: relative;
+      overflow-y: scroll;
 
-      .layout__content {
-         overflow-y: scroll;
-         height: 100%;
+      &::-webkit-scrollbar {
+         width: 0;
+         height: 0;
+      }
+      &::-webkit-scrollbar-track {
+         background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+         position: absolute;
+         background-color: $color-6;
+         border-radius: 8px;
+      }
 
-         &::-webkit-scrollbar {
-            width: 0;
-            height: 0;
-         }
-         &::-webkit-scrollbar-track {
-            background: transparent;
-         }
-         &::-webkit-scrollbar-thumb {
-            position: absolute;
-            background-color: $color-6;
-            border-radius: 8px;
+      .pageName {
+         position: fixed;
+         left: -5rem;
+         bottom: 0px;
+         opacity: 1;
+         font-size: 29.42vmin;
+         color: #080f18;
+         letter-spacing: -0.3rem;
+         white-space: pre;
+         z-index: -1;
+         &.somePages {
+            writing-mode: tb-rl;
          }
       }
    }

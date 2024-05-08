@@ -1,58 +1,5 @@
 import React from 'react';
 
-export const getLocationName = (link) => {
-   switch (link) {
-      case '/#hero':
-         return 'Hi, There';
-      case '/#about':
-         return 'About Me';
-      case '/#experience':
-         return 'Experience';
-      case '/#skills':
-         return 'Skills';
-      case '/#projects':
-         return 'Projects';
-      case '/#contact':
-         return 'Contact';
-      default:
-         return '';
-   }
-};
-
-export const footerLabel = (num) => {
-   switch (num) {
-      case 1:
-         return 'Continue To About';
-      case 2:
-         return 'Continue To Projects';
-      case 3:
-         return 'Continue to Services';
-      case 4:
-         return 'Are you convinced to contact me now ?';
-      case 5:
-         return 'Go back home.';
-      default:
-         return '';
-   }
-};
-
-export const footerLink = (num) => {
-   switch (num) {
-      case 1:
-         return '/about';
-      case 2:
-         return '/projects';
-      case 3:
-         return '/services';
-      case 4:
-         return '/contact';
-      case 5:
-         return '/';
-      default:
-         return '';
-   }
-};
-
 export const Moon = () => {
    return (
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#fff">

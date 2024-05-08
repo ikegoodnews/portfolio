@@ -6,9 +6,10 @@ a.skip-main {
    height: 1px;
    overflow: hidden;
    z-index: -999;
-   &:focus,
+   &:focus-visible,
    &:active {
       color: var(--bg);
+      font-size: var(--font-sm);
       background-color: var(--cw);
       left: auto;
       top: auto;
@@ -22,7 +23,6 @@ a.skip-main {
       text-align: center;
       font-size: 1.2em;
       font-weight: 500;
-      font-size: var(--font-sm);
       z-index: 9999999;
    }
 }

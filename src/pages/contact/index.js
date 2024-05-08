@@ -1,15 +1,15 @@
 import {TextInput, TextArea} from '@/_components/CustomInput';
-import SectionWrapper from '@/_components/SectionWrapper';
 import Title from '@/_components/Title';
 import React, {useRef} from 'react';
 import emailjs from '@emailjs/browser';
 import {AppEmitter} from '@/_controllers/EventEmitter';
 import {toast} from 'react-toastify';
+import {Layout} from '@/_components';
 
 const Contact = () => {
    const form = useRef();
    const success = () => toast.success('Email successfully sent!');
-   const error = () => toast.error('Email not sent!');
+   const errorMessage = () => toast.error('Email not sent!');
 
    const handleSubmit = (e) => {
       e.preventDefault();
@@ -27,13 +27,13 @@ const Contact = () => {
             },
             (error) => {
                console.log('FAILED...', error.text);
-               error();
+               errorMessage();
             },
          );
    };
 
    return (
-      <SectionWrapper sectionId="contact" className="contact__section py-lg-5 py-4">
+      <Layout title="Contact" className="contact__section py-lg-5 py-4">
          <div className="w-100">
             <Title tClassName="text-center" label="get in touch" title="contact" />
 
@@ -81,7 +81,7 @@ const Contact = () => {
                </div> */}
             </div>
          </div>
-      </SectionWrapper>
+      </Layout>
    );
 };
 

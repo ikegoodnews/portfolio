@@ -1,25 +1,15 @@
-import React, {memo, useCallback, useEffect, useRef, useState} from 'react';
-import {useOnClickOutside, useRoutesCode} from '@/_helpers';
+import React, {memo, useCallback, useContext} from 'react';
 import {menuDrop} from '@/_constants';
 import {useRouter} from 'next/router';
 import classNames from 'classnames';
 import Link from 'next/link';
-
-// import CV from '../../../public/_assets/pdf/CV_GOODNEWS_OGECHUKWU_IKE.pdf';
+import AppContext from '@/_utils/context';
+import {Icon, Moon} from '@/_components';
 
 // eslint-disable-next-line react/display-name
-const Navbar = memo(() => {
-   const code = useRoutesCode();
+const Navbar = memo((props) => {
    const router = useRouter();
-   const dropdownRef = useRef(null);
-   const [el, setEl] = useState(null);
-   const [dropdown, setDropdown] = useState(false);
-   const [navHeight, setNavHeight] = useState(false);
-   // console.log(`navHeight=====>`, navHeight);
-
-   useOnClickOutside(dropdownRef, () => {
-      if (dropdown) setDropdown(false);
-   });
+   const {show, handleOpen, setTheme, closeShow, theme} = useContext(AppContext);
 
    const activeRoute = useCallback(
       (link) => {
@@ -28,53 +18,55 @@ const Navbar = memo(() => {
       [router.asPath],
    );
 
-   const changeNavHeight = () => {
-      if (window.scrollY >= 40) {
-         setNavHeight(true);
-      } else {
-         setNavHeight(false);
-      }
-   };
-
-   useEffect(() => {
-      // console.log(`window=====>`, window);
-      window.addEventListener('scroll', changeNavHeight);
-
-      return () => window.removeEventListener('scroll', changeNavHeight);
-   }, []);
-
    return (
-      <nav className={classNames('position-fixed d-flex align-items-center justify-content-center', {navHeight})}>
+      <nav className={classNames('navbar navbar-expand-lg d-flex align-items-center', {})}>
+         {/* active: props.show, hidden: !props.show */}
          <div className="container-fluid d-flex align-items-center">
             <div className="container px-0 d-flex align-items-center justify-content-between">
-               <div className="logo">GO.</div>
-               <ul className={classNames('nav__list d-flex align-items-center', {})}>
-                  {menuDrop?.map((item, i) => (
-                     <li key={`menuDropItem-${i}`} onClick={() => setDropdown(false)} className="text-capitalize ms-4">
-                        <button
-                           // href={item.link}
-                           onClick={() => {
-                              const element = document.getElementById(item.label);
-                              setEl(element);
-                              element?.scrollIntoView({
-                                 behavior: 'smooth',
-                              });
-                           }}
-                           className={classNames('d-flex h-100', {active: el === item.label})}>
-                           <span className="label">{item.label}</span>
-                        </button>
+               <Link href="/home" tabIndex={show && -1}>
+                  <div className="logo">GO.</div>
+               </Link>
+               <button
+                  className="navbar-toggler"
+                  type="button"
+                  onClick={handleOpen}
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupporyedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  tabIndex={show && -1}>
+                  <span className="navbar-toggler-icon" />
+               </button>
+               <div className={`collapse navbar-collapse d-flex ${show && 'show'}`} id="navbarSupportedContent">
+                  <button className="d-block d-md-none close-nav" onClick={handleOpen} type="button">
+                     <Icon />
+                  </button>
+                  <ul className={classNames('navbar-nav flex-row ms-auto nav__list d-flex align-items-center', {})}>
+                     {menuDrop
+                        ?.filter((obj) => obj.link !== router.asPath)
+                        ?.map((item, i) => (
+                           <li key={`menuItem-${i}`} className="text-capitalize ms-4">
+                              <Link
+                                 href={item.link}
+                                 onClick={closeShow}
+                                 aria-label={item.link}
+                                 title={item.label}
+                                 className={classNames('d-flex h-100', {active: activeRoute(item.link)})}>
+                                 <span className="label">{item.label}</span>
+                              </Link>
+                           </li>
+                        ))}
+                     <li className="text-capitalize ms-4">
+                        <Link
+                           href={'#!'}
+                           aria-label={`Turn On ${theme === false ? 'Light' : 'Dark'} Mood`}
+                           onClick={setTheme}
+                           className="d-flex h-100">
+                           <Moon />
+                        </Link>
                      </li>
-                  ))}
-               </ul>
-               <div className="">
-                  <a
-                     href="./_assets/pdf/CV_GOODNEWS_OGECHUKWU_IKE.pdf"
-                     target="_blank"
-                     alt="GOODNEWS OGECHUKWU IKE CV"
-                     rel="noopener noreferrer"
-                     className="action__button">
-                     <i class="fa fa-download" aria-hidden="true"></i> CV.
-                  </a>
+                  </ul>
                </div>
             </div>
          </div>

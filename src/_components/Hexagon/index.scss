@@ -1,6 +1,7 @@
 .hexagon {
    position: absolute;
    height: 100vh;
+   // height: 100%;
    overflow: hidden;
    left: 0;
    top: 0;
@@ -48,8 +49,8 @@
    }
 }
 
-body:hover .cursor {
-   background: radial-gradient(circle, $color-4 23%, $color-1 100%);
-   visibility: visible;
-   // filter: blur(20px);
-}
+// body:hover .cursor {
+//    background: radial-gradient(circle, $color-4 23%, $color-1 100%);
+//    visibility: visible;
+//    filter: blur(20px);
+// }

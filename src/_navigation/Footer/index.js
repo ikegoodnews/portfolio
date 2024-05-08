@@ -1,7 +1,8 @@
 import {footerSocial} from '@/_constants';
-import {Facebook, Github, IconRight, Instagram, Linkedin, Twitter} from '@/_helpers';
-import Link from 'next/link';
+// import {IconRight} from '@/_utils';
 import React, {memo} from 'react';
+import Link from 'next/link';
+import {IconRight} from '@/_components/Icons';
 
 // eslint-disable-next-line react/display-name
 const Footer = memo((props) => {

@@ -1,0 +1,31 @@
+{
+  "name": "Goodnews Ogechukwu Ike",
+  "short_name": "Goo.dev",
+  "icons": [
+   {
+      "src": "/icons/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

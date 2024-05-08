@@ -1,7 +1,7 @@
-import SectionWrapper from '@/_components/SectionWrapper';
+import {Layout} from '@/_components';
 import Title from '@/_components/Title';
 import {aboutCards, techStacks} from '@/_constants';
-import {numToString} from '@/_helpers';
+import {numToString} from '@/_utils';
 import classNames from 'classnames';
 import React, {useEffect} from 'react';
 
@@ -29,7 +29,7 @@ const About = () => {
    }, []);
 
    return (
-      <SectionWrapper sectionId="about" className="about__section py-lg-5 py-4">
+      <Layout title="About" className="about__section py-lg-5 py-4">
          <div className="w-100">
             <Title label="introduction" title="overview" />
             <p className="section__description observe mt-3">
@@ -70,7 +70,7 @@ const About = () => {
                </div>
             </div>
          </div>
-      </SectionWrapper>
+      </Layout>
    );
 };
 

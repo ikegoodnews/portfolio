@@ -1,5 +1,5 @@
 .contact__section {
-   height: 100vh;
+   // height: 100vh;
 
    form {
       input,
@@ -10,6 +10,7 @@
          padding: 1rem 1.2rem;
          color: #a7a7a7;
          font-size: 1rem;
+         backdrop-filter: blur(15px);
          // &::placeholder {
          //    font-size: 1rem !important;
          // }
@@ -21,13 +22,13 @@
          top: 12px;
          left: 25px;
          transition: 0.2s ease-in;
-         z-index: 0;
+         z-index: 1;
       }
       .wrapper {
          &.focus,
          &.filled {
             label {
-               transform: translateX(-13px) translateY(-25px) scale(0.8);
+               transform: translateX(-17px) translateY(-25px) scale(0.8);
                background: $color-9;
                padding: 0.2rem 0.5rem;
             }
