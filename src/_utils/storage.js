@@ -5,13 +5,14 @@ if (!(typeof window === 'undefined')) {
    localForage.setDriver([localForage.INDEXEDDB, localForage.LOCALSTORAGE, localForage.WEBSQL]);
 }
 
-const passphrase = 'GOO_DEV';
+const pass = 'GOO_DEV_LOCK';
+export const passphrase = 'GOO_DEV';
 
-export const getObjectFromStorage = async (key = passphrase) => {
+export const getObjectFromStorage = async (key) => {
    try {
       return localForage.getItem(key).then((data) => {
-         if (passphrase && !!data) {
-            data = CryptoJS.AES.decrypt(data, passphrase);
+         if (pass && !!data) {
+            data = CryptoJS.AES.decrypt(data, pass);
             data = data.toString(CryptoJS.enc.Utf8);
             return JSON.parse(data);
          }
@@ -22,10 +23,10 @@ export const getObjectFromStorage = async (key = passphrase) => {
    }
 };
 
-export const setObjectInStorage = async (key = passphrase, data) => {
+export const setObjectInStorage = async (key, data) => {
    try {
-      if (passphrase) {
-         data = CryptoJS.AES.encrypt(JSON.stringify(data), passphrase).toString();
+      if (pass) {
+         data = CryptoJS.AES.encrypt(JSON.stringify(data), pass).toString();
       }
       await localForage.setItem(key, data);
       return true;
@@ -34,7 +35,7 @@ export const setObjectInStorage = async (key = passphrase, data) => {
    }
 };
 
-export const clearObjectFromStorage = async (key = passphrase) => {
+export const clearObjectFromStorage = async (key) => {
    try {
       await localForage.removeItem(key);
       return true;

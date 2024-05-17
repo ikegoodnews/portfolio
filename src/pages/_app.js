@@ -6,7 +6,7 @@ import {useEffect, useState} from 'react';
 import {ToastContainer} from 'react-toastify';
 import AppContext from '@/_utils/context';
 import {PageTransition} from 'next-page-transitions';
-import {clearObjectFromStorage, getObjectFromStorage, setObjectInStorage} from '@/_utils/storage';
+import {clearObjectFromStorage, getObjectFromStorage, passphrase, setObjectInStorage} from '@/_utils/storage';
 
 if (process.env.NODE_ENV !== 'development') {
    console.log = () => {};
@@ -14,7 +14,10 @@ if (process.env.NODE_ENV !== 'development') {
 
 export default function App({Component, pageProps}) {
    const [show, setShow] = useState(true);
-   const [theme, setTheme] = useState(getObjectFromStorage() ? true : false);
+   // const getStorageValue = getObjectFromStorage(passphrase);
+   // console.log(`getStorageValue=====>`, getStorageValue);
+
+   const [theme, setTheme] = useState(); // getStorageValue ? true : false
 
    useEffect(() => {
       // typeof document !== undefined &&
@@ -23,9 +26,9 @@ export default function App({Component, pageProps}) {
 
    const loadTheme = () => {
       if (!theme) {
-         clearObjectFromStorage();
+         clearObjectFromStorage(passphrase);
       } else {
-         setObjectInStorage(1);
+         setObjectInStorage(passphrase, 1);
       }
    };
 

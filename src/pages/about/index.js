@@ -31,12 +31,20 @@ const About = () => {
    return (
       <Layout title="About" className="about__section py-lg-5 py-4">
          <div className="w-100">
-            <Title label="introduction" title="overview" />
-            <p className="section__description observe mt-3">
-               I&apos;m a skilled software developer with experience in Dart and JavaScript, and expertise in frameworks like Next.js, React.js,
-               Node.js, and Flutter. I&apos;m a fast pace learner and collaborate closely with clients to create efficient, scalable, and
-               user-friendly solutions that solve real-world problems. Let&apos;s work together to bring your ideas to life!
-            </p>
+            <Title label="" title="about me" />
+
+            <div className="pt-4">
+               <p className="about__me py-4">
+                  Highly proficient software developer with over 3 years of professional experience in developing robust and scalable web
+                  applications. My expertise lies in full-stack development with a keen focus on front-end technologies and user experience. I am
+                  committed to continuous learning and applying new technologies to solve complex problems.
+               </p>
+               <p className="about__me py-4">
+                  With a Bachelor of Science in Mathematics from the University of Lagos,
+                  I have a strong foundation in logical thinking and problem-solving,
+                  which I apply to my software development projects.
+               </p>
+            </div>
 
             <div className="row mt-md-5 mt-4">
                {aboutCards?.map((card, i) => (

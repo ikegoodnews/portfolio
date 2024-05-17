@@ -55,7 +55,7 @@ const Layout = memo(({children, title, className}) => {
    // }, [lastScrollY]);
 
    return (
-      <main className="">
+      <main className="main__wrapper">
          <Head>
             <title>{`${title} | Goodnews Ogechukwu Ike | goo.dev`}</title>
             <meta name="msapplication-TileColor" content={`${theme ? '#000000' : '#FFFFFF'}`} />
@@ -63,14 +63,14 @@ const Layout = memo(({children, title, className}) => {
          </Head>
 
          <div className="PageLayout container-fluid p-0">
-            <div className="PageLayout__Backdrop" />
+            {/* <div className="PageLayout__Backdrop" /> */}
             <div className="mouse__handle" />
             <div className="PageLayout__Contents">
                <SkipToContent content="main-content" />
                <Navbar />
                <div className="container">
                   <div className="row m-0 align-items-center justify-content-center">
-                     <div className="col-md-10">
+                     <div className="col-md-10 px-0">
                         <section id="main-content" className={classNames('section__wrapper', className)}>
                            {children}
                         </section>
@@ -79,7 +79,7 @@ const Layout = memo(({children, title, className}) => {
                   </div>
                </div>
                <div className={classNames('pageName', {somePages: router.asPath === '/resume' || router.asPath === '/projects'})}>
-                  {getLocationName(router.asPath)}.
+                  <h1 className="">{getLocationName(router.asPath)}.</h1>
                </div>
             </div>
          </div>

@@ -42,7 +42,7 @@ const Navbar = memo((props) => {
                   <button className="d-block d-md-none close-nav" onClick={handleOpen} type="button">
                      <Icon />
                   </button>
-                  <ul className={classNames('navbar-nav flex-row ms-auto nav__list d-flex align-items-center', {})}>
+                  <ul className={classNames('navbar-nav flex-row ms-auto nav__list d-none d-md-flex align-items-center', {})}>
                      {menuDrop
                         ?.filter((obj) => obj.link !== router.asPath)
                         ?.map((item, i) => (
@@ -52,7 +52,7 @@ const Navbar = memo((props) => {
                                  onClick={closeShow}
                                  aria-label={item.link}
                                  title={item.label}
-                                 className={classNames('d-flex h-100', {active: activeRoute(item.link)})}>
+                                 className={classNames('d-flex h-100 p-2', {active: activeRoute(item.link)})}>
                                  <span className="label">{item.label}</span>
                               </Link>
                            </li>

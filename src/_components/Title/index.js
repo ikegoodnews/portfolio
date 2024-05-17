@@ -20,8 +20,8 @@ const Title = memo(({title, label, tClassName}) => {
 
    return (
       <div className={`section__title ${tClassName}`}>
-         <p className="">{label}</p>
-         <h2 className="">{title}.</h2>
+         {label && <p className="">{label}</p>}
+         {title && <h2 className="">{title}.</h2>}
       </div>
    );
 });
