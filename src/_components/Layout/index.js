@@ -8,7 +8,7 @@ import {useRouter} from 'next/router';
 import AppContext from '@/_utils/context';
 
 // eslint-disable-next-line react/display-name
-const Layout = memo(({children, title, className}) => {
+const Layout = memo(({children, title, className, ...rest}) => {
    const router = useRouter();
    const code = useRoutesCode();
    // const [show, setShow] = useState(true);
@@ -60,6 +60,13 @@ const Layout = memo(({children, title, className}) => {
             <title>{`${title} | Goodnews Ogechukwu Ike | goo.dev`}</title>
             <meta name="msapplication-TileColor" content={`${theme ? '#000000' : '#FFFFFF'}`} />
             <meta name="theme-color" content={`${theme ? '#000000' : '#FFFFFF'}`} />
+            <link
+               rel="stylesheet"
+               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+               integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+               crossOrigin
+               referrerPolicy="no-referrer"
+            />
          </Head>
 
          <div className="PageLayout container-fluid p-0">
@@ -78,8 +85,8 @@ const Layout = memo(({children, title, className}) => {
                      </div>
                   </div>
                </div>
-               <div className={classNames('pageName', {somePages: router.asPath === '/resume' || router.asPath === '/projects'})}>
-                  <h1 className="">{getLocationName(router.asPath)}.</h1>
+               <div className={classNames('pageName', {somePages: router.pathname === '/resume' || router.pathname === '/projects'})}>
+                  <h1 className="">{getLocationName(router.pathname)}.</h1>
                </div>
             </div>
          </div>

@@ -24,7 +24,7 @@ export const getLocationName = (link) => {
 export const footerLabel = (num) => {
    switch (num) {
       case 1:
-         return 'Continue To Know More About Me';
+         return 'See More About Me';
       case 2:
          return 'Continue To Projects';
       case 3:
@@ -49,7 +49,7 @@ export const footerLink = (num) => {
       case 4:
          return '/contact';
       case 5:
-         return '/';
+         return '/home';
       default:
          return '';
    }

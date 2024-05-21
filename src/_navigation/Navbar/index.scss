@@ -2,22 +2,17 @@ nav {
    width: 100%;
    z-index: 1260;
    height: 9.8rem;
-   &.active {
-      // backdrop-filter: blur(15px);
-      visibility: visible;
-      transition: 0.3s ease-in;
+   @media (max-width: 575px) {
+      height: 111px;
    }
-   &.hidden {
-      visibility: hidden;
-      transition: 0.2s ease-out;
-      transform: translateY(-100%);
-   }
+
    .logo {
       font-weight: 700;
       font-size: 3rem;
       color: $color-12;
-      font-family: 'Abril FatFace';
+      font-family: 'ProstoOne';
    }
+
    .nav__list {
       overflow: hidden;
       li {
@@ -53,22 +48,46 @@ nav {
             cursor: pointer;
             position: relative;
             text-transform: capitalize;
-            // &:hover,
-            // &.active {
-            //    color: $color-4;
-            // }
          }
       }
    }
-   .action__button {
-      border-radius: 4px;
-      padding: 0.4rem 1.2rem;
-      color: $color-12;
-      border: 1px solid $color-12;
-      transition: color 0.2s ease-in;
-      &:hover {
-         color: $color-5;
-         border: 1px solid $color-5;
+
+   .collapse {
+      &.show {
+         display: flex;
+         height: fit-content;
+         z-index: 1001;
+         @media (max-width: 991px) {
+            background-color: rgba(255, 255, 255, .05);
+            width: 12rem;
+            backdrop-filter: blur(12px);
+            border-radius: 6px;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            ul {
+               width: 100%;
+               padding: 1rem 0;
+               flex-direction: column !important;
+               li {
+                  width: 100%;
+                  transition: .2s ease-in;
+                  &::before {
+                     content: none;
+                  }
+                  &:hover {
+                     background-color: rgba(255, 255, 255, .03);
+                  }
+                  > a {
+                     display: flex;
+                     justify-content: center;
+                     > span {
+                        font-weight: 700;
+                     }
+                  }
+               }
+            }
+         }
       }
    }
 }

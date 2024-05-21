@@ -20,7 +20,7 @@ export const footerSocial = [
 
 export const aboutCards = [
    {id: 1, icon: 'fa fa-laptop', label: 'frontend developer'},
-   {id: 2, icon: 'fa fa-cogs', label: 'web developer'},
+   {id: 2, icon: 'fa fa-cogs', label: 'web app developer'},
    {id: 3, icon: 'fa fa-mobile', label: 'flutter app developer'},
    {id: 3, icon: 'fa fa-desktop', label: 'desktop app developer'},
 ];

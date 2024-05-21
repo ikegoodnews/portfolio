@@ -19,11 +19,10 @@ const Projects = () => {
                and manage projects effectively.
             </p> */}
 
-            <div className="row mt-5">
+            <div className="row mt-5 gx-5">
                {projectsData?.slice(0, 4)?.map((project, i) => (
-                  <div key={i} className="col-lg-6 mb-4">
+                  <div key={i} className="col-lg-6 mb-md-5 mb-4">
                      <div className="position-relative">
-                        {/* <div className="bg__layer"></div> */}
                         <div className="projectCard h-100">
                            <div className="img_wrapper">
                               <Image
@@ -57,16 +56,6 @@ const Projects = () => {
                                     ))}
                                  </div>
                               </div>
-                              {/* <div className="links pt-xl-3 pt-1 d-flex align-items-center justify-content-between">
-                                 <button className="click">
-                                    <i className="fa fa-github me-2" aria-hidden="true"></i>
-                                    source code.
-                                 </button>
-                                 <button className="click">
-                                    <i className="fa fa-external-link me-2" aria-hidden="true"></i>
-                                    view demo.
-                                 </button>
-                              </div> */}
                            </div>
                         </div>
                      </div>

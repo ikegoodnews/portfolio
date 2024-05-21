@@ -1,0 +1,16 @@
+.projects__section {
+
+   iframe {
+      width: 100%;
+      filter: invert(1) grayscale(calc(1 - 0.15));
+      border: none;
+      height: 44.5rem;
+      @media (min-width: 768px) {
+         width: 82.8% !important;
+         height: 70.4rem !important;
+      }
+   }
+   // #sub-frame-error {
+   //    background-color: #ddd;
+   // }
+}

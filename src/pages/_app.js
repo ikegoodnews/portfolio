@@ -13,15 +13,34 @@ if (process.env.NODE_ENV !== 'development') {
 }
 
 export default function App({Component, pageProps}) {
-   const [show, setShow] = useState(true);
-   // const getStorageValue = getObjectFromStorage(passphrase);
-   // console.log(`getStorageValue=====>`, getStorageValue);
-
+   const [show, setShow] = useState(false);
    const [theme, setTheme] = useState(); // getStorageValue ? true : false
 
    useEffect(() => {
       // typeof document !== undefined &&
       require('bootstrap/dist/js/bootstrap.js');
+   }, []);
+
+   useEffect(() => {
+      const cards = document.querySelectorAll('.observe');
+
+      const observer = new IntersectionObserver(
+         (entries) => {
+            entries.forEach((entry) => {
+               entry.target.classList.toggle('show', entry.isIntersecting);
+               // if (entry.isIntersecting) observer.unobserve(entry.target);
+            });
+         },
+         {
+            rootMargin: '0px',
+         },
+      );
+
+      if (cards) {
+         cards.forEach((card) => {
+            observer.observe(card);
+         });
+      }
    }, []);
 
    const loadTheme = () => {
@@ -72,3 +91,5 @@ const getInitialProps = async ({Component, ctx}) => {
 
    return {pageProps};
 };
+
+App.getInitialProps = getInitialProps;

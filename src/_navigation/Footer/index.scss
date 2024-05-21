@@ -2,6 +2,8 @@ footer {
    // height: 17rem;
    // width: 100%;
    p {
+      font-size: .9rem;
+      font-weight: 600;
       color: $color-13;
       transition: $trans;
       &:hover {
@@ -25,6 +27,24 @@ footer {
          &:hover svg {
             fill: $color-4;
          }
+      }
+   }
+   @media (max-width: 991px) {
+      .social__handles {
+         position: fixed;
+         backdrop-filter: blur(6px) saturate(2.5);
+         display: flex;
+         right: 0px;
+         z-index: 999;
+         -webkit-box-align: center;
+         align-items: center;
+         justify-content: space-evenly;
+         background: #07121dd4 !important;
+         width: 100% !important;
+         padding: 0px !important;
+         flex-direction: row !important;
+         height: 60px !important;
+         bottom: 0px !important;
       }
    }
 }

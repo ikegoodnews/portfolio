@@ -38,7 +38,7 @@ const Contact = () => {
             <Title tClassName="text-center" label="get in touch" title="contact" />
 
             <div className="row mt-lg-5 mt-4">
-               <div className="col-md-7 mx-auto">
+               <div className="col-lg-7 mx-auto">
                   <form ref={form} onSubmit={handleSubmit} className="w-100">
                      <TextInput
                         name="user_name"
@@ -68,9 +68,11 @@ const Contact = () => {
                         rows={5}
                         required
                      />
-                     <button type="submit" className="submit">
-                        send message
-                     </button>
+                     <div className="d-flex justify-content-center">
+                        <button type="submit" className="submit">
+                           send message
+                        </button>
+                     </div>
                   </form>
                </div>
                {/* <div className="col-md-5">
