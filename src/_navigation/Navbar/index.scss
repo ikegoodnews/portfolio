@@ -9,7 +9,7 @@ nav {
    .logo {
       font-weight: 700;
       font-size: 3rem;
-      color: $color-12;
+      color: var(--color-12);
       font-family: 'ProstoOne';
    }
 
@@ -24,7 +24,7 @@ nav {
             left: 51%;
             right: 51%;
             bottom: -0.5px;
-            background: $color-12;
+            background: var(--color-12);
             height: 1px;
             -webkit-transition-property: left, right;
             transition-property: left, right;
@@ -42,12 +42,19 @@ nav {
          a {
             font-size: 0.875rem;
             font-weight: 600;
-            color: $color-12;
+            color: var(--color-12);
             border-radius: 4px;
             transition: $trans;
             cursor: pointer;
             position: relative;
             text-transform: capitalize;
+         }
+         &:last-child {
+            a {
+               svg {
+                  filter: invert(var(--theme-amount));
+               }
+            }
          }
       }
    }
@@ -58,7 +65,7 @@ nav {
          height: fit-content;
          z-index: 1001;
          @media (max-width: 991px) {
-            background-color: rgba(255, 255, 255, .05);
+            background-color: rgba(255, 255, 255, 0.05);
             width: 12rem;
             backdrop-filter: blur(12px);
             border-radius: 6px;
@@ -71,12 +78,12 @@ nav {
                flex-direction: column !important;
                li {
                   width: 100%;
-                  transition: .2s ease-in;
+                  transition: 0.2s ease-in;
                   &::before {
                      content: none;
                   }
                   &:hover {
-                     background-color: rgba(255, 255, 255, .03);
+                     background-color: rgba(255, 255, 255, 0.03);
                   }
                   > a {
                      display: flex;

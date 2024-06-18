@@ -10,7 +10,9 @@ export default function Document(props) {
             <link rel="icon" href="/favicon.ico" />
             <meta property="og:url" content="https://goo.dev/" />
             <meta property="og:title" content="Goodnews Ike Portfolio Website" />
-            <meta property="og:description" content="Goodnews Ike Portfolio Website, developer portfolio, frontend portfolio" />
+            <meta
+               property="og:description"
+               content="Goodnews Ike - Highly skilled software developer with years of experience delivering innovative and impactful digital solutions to businesses. Seeking to advance as a software engineer with your reputable organization." />
             <meta property="og:type" content="website" />
             <meta name="author" content="Goodnews Ogechukwu Ike" />
             <meta name="keywords" content="Goodnews Ogechukwu Ike, software developer, frontend engineer, frontend, developer" />

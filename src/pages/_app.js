@@ -14,49 +14,66 @@ if (process.env.NODE_ENV !== 'development') {
 
 export default function App({Component, pageProps}) {
    const [show, setShow] = useState(false);
-   const [theme, setTheme] = useState(); // getStorageValue ? true : false
+   // const [theme, setTheme] = useState(getObjectFromStorage(passphrase)); // getStorageValue ? true : false
+   // console.log(`theme=====>`, theme);
 
    useEffect(() => {
       // typeof document !== undefined &&
       require('bootstrap/dist/js/bootstrap.js');
    }, []);
 
-   useEffect(() => {
-      const cards = document.querySelectorAll('.observe');
+   // useEffect(() => {
+   //    const cards = document.querySelectorAll('.observe');
 
-      const observer = new IntersectionObserver(
-         (entries) => {
-            entries.forEach((entry) => {
-               entry.target.classList.toggle('show', entry.isIntersecting);
-               // if (entry.isIntersecting) observer.unobserve(entry.target);
-            });
-         },
-         {
-            rootMargin: '0px',
-         },
-      );
+   //    const observer = new IntersectionObserver(
+   //       (entries) => {
+   //          entries.forEach((entry) => {
+   //             entry.target.classList.toggle('show', entry.isIntersecting);
+   //             // if (entry.isIntersecting) observer.unobserve(entry.target);
+   //          });
+   //       },
+   //       {
+   //          rootMargin: '0px',
+   //       },
+   //    );
 
-      if (cards) {
-         cards.forEach((card) => {
-            observer.observe(card);
-         });
-      }
-   }, []);
+   //    if (cards) {
+   //       cards.forEach((card) => {
+   //          observer.observe(card);
+   //       });
+   //    }
+   // }, []);
 
-   const loadTheme = () => {
-      if (!theme) {
-         clearObjectFromStorage(passphrase);
-      } else {
-         setObjectInStorage(passphrase, 1);
-      }
-   };
+   // const loadTheme = () => {
+   //    if (theme === '') {
+   //       clearObjectFromStorage(passphrase);
+   //    } else {
+   //       setObjectInStorage(passphrase, 'dark');
+   //    }
+   // };
+
+   // useEffect(() => {
+   //    if (theme === 'dark') {}
+   //    if (theme === 'light') {}
+   // }, [theme]);
 
    const handleOpen = () => {
       setShow(true);
    };
-   const handleTheme = () => {
-      setTheme((prev) => !prev);
-   };
+
+   // const handleTheme = (mode) => {
+   //    // setTheme((prev) => !prev);
+   //    setObjectInStorage(passphrase, mode);
+   //    if (theme === 'dark')
+   //    {
+   //       setTheme('light')
+   //    }
+   //    if (theme === 'light')
+   //    {
+   //       setTheme('dark')
+   //    }
+   // };
+
    const closeShow = () => {
       setShow(false);
    };
@@ -64,7 +81,7 @@ export default function App({Component, pageProps}) {
    return (
       <>
          <PageTransition timeout={200} classNames="page-transition" loadingDelay={100}>
-            <AppContext.Provider
+            {/* <AppContext.Provider
                key={Math.floor(Math.random() * Math.floor(20))}
                value={{
                   show: show,
@@ -73,10 +90,10 @@ export default function App({Component, pageProps}) {
                   setTheme: handleTheme,
                   handleOpen: handleOpen,
                   closeShow: closeShow,
-               }}>
-               <Component {...pageProps} />
-               <ToastContainer />
-            </AppContext.Provider>
+               }}> */}
+            <Component {...pageProps} />
+            <ToastContainer />
+            {/* </AppContext.Provider> */}
          </PageTransition>
       </>
    );

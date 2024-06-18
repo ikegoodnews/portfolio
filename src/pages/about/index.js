@@ -14,12 +14,12 @@ const About = () => {
 
             <ul className="about__me mt-4 pe-md-5">
                <li className="">
-                  I am a passionate software developer with over 3 years of professional experience in the industry. My expertise lies in web
-                  development, web app development, develop app development, and mobile app development, and I am proficient in languages and
-                  technologies including JavaScript, Next.js, React.js, Redux/Redux-saga, Dart, Flutter, Bootstrap, Tailwind.
+                  I am a passionate software developer with over 3 years of professional experience in the industry. My expertise lies in website, web
+                  application, desktop application, and mobile application development, and I am proficient in languages and technologies including
+                  JavaScript, Next.js, React.js, Redux/Redux-saga, Dart, Flutter, Bootstrap, Tailwind.
                </li>
                <li className="">
-                  I have a strong background in live audio-streaming platform, fin-tech, e-commerce, educational tech, and I am dedicated to creating
+                  I have a strong background in live audio-streaming platform, fin-tech, e-commerce, educational tech, and dedicated to creating
                   efficient, scalable, and user-friendly solutions. My work often involves building web applications, binding APIs to frontend,
                   optimizing web apps, etc.
                </li>

@@ -17,7 +17,7 @@
       }
       li {
          font-weight: 600;
-         color: $color-3;
+         color: var(--color-3);
          font-size: calc(0.875rem + 0.9px);
          line-height: 2;
          margin: 2.5rem 0;
@@ -40,7 +40,7 @@
             font-weight: 900;
             line-height: 20px;
             text-transform: uppercase;
-            transition: .2s ease-in;
+            transition: 0.2s ease-in;
             text-decoration: underline;
             &:hover {
                color: #37609c;
@@ -75,7 +75,7 @@
          // height: 60%;
          display: flex;
          align-items: center;
-         color: $color-4;
+         color: var(--color-4);
          transition: scale 0.15s ease-in;
          display: flex;
          align-items: center;

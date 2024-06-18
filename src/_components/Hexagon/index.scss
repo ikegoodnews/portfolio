@@ -32,7 +32,7 @@
          margin: 1px;
          transition: 0.3s ease-in;
          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-         background: linear-gradient(90deg, $color-1 40%, $color-11 60%);
+         background: linear-gradient(90deg, var(--color-1) 40%, var(--color-11) 60%);
          &:hover {
             transition: 0s;
          }
@@ -50,7 +50,7 @@
 }
 
 // body:hover .cursor {
-//    background: radial-gradient(circle, $color-4 23%, $color-1 100%);
+//    background: radial-gradient(circle, --color-4 23%, --color-1 100%);
 //    visibility: visible;
 //    filter: blur(20px);
 // }

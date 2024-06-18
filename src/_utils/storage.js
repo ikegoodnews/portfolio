@@ -10,7 +10,7 @@ export const passphrase = 'GOO_DEV';
 
 export const getObjectFromStorage = async (key) => {
    try {
-      return localForage.getItem(key).then((data) => {
+      return await localForage.getItem(key).then((data) => {
          if (pass && !!data) {
             data = CryptoJS.AES.decrypt(data, pass);
             data = data.toString(CryptoJS.enc.Utf8);

@@ -2,9 +2,9 @@ footer {
    // height: 17rem;
    // width: 100%;
    p {
-      font-size: .9rem;
+      font-size: 0.9rem;
       font-weight: 600;
-      color: $color-13;
+      color: var(--color-13);
       transition: $trans;
       &:hover {
          text-decoration: underline;
@@ -20,12 +20,12 @@ footer {
          margin-right: 2rem;
          svg {
             height: 15px;
-            fill: $color-13;
+            fill: var(--color-13);
             transition: all 1s ease 0s;
             cursor: pointer;
          }
          &:hover svg {
-            fill: $color-4;
+            fill: var(--color-4);
          }
       }
    }

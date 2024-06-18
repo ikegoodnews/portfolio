@@ -2,12 +2,12 @@ import React from 'react';
 
 export const getLocationName = (link) => {
    switch (link) {
-      case '/':
+      case '/' || '#!' || '/home':
          return 'Hi, There';
-      case '/#!':
-         return 'Hi, There';
-      case '/home':
-         return 'Hi, There';
+      // case '/#!':
+      //    return 'Hi, There';
+      // case '/home':
+      //    return 'Hi, There';
       case '/about':
          return 'About Me';
       case '/projects':

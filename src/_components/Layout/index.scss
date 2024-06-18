@@ -46,7 +46,7 @@
       }
       &::-webkit-scrollbar-thumb {
          position: absolute;
-         background-color: $color-6;
+         background-color: var(--color-6);
          border-radius: 8px;
       }
 
@@ -110,7 +110,7 @@
          }
          &::-webkit-scrollbar-thumb {
             position: absolute;
-            background-color: $color-6;
+            background-color: var(--color-6);
             border-radius: 8px;
          }
 

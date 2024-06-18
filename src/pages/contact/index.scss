@@ -29,7 +29,7 @@
          &.filled {
             label {
                transform: translateX(-17px) translateY(-25px) scale(0.8);
-               background: $color-9;
+               background: var(--color-9);
                padding: 0.2rem 0.5rem;
             }
          }
@@ -38,13 +38,13 @@
          font-size: 0.9rem;
          font-weight: 400 !important;
          color: $white;
-         background: $color-5;
+         background: var(--color-5);
          border-radius: 6px;
          padding: 1rem 2rem;
          text-transform: capitalize;
          transition: $trans1;
          &:hover {
-            background: $color-5a;
+            background: var(--color-5a);
          }
          &:disabled {
             background: rgba(255, 255, 255, 0.2);
