@@ -1,4 +1,5 @@
 import React, {memo, useCallback, useEffect, useRef, useState} from 'react';
+import FullscreenModal from '../..';
 // import {TextArea, TextInput, DragAndDrop} from '@/_components';
 // import {formatMilliseconds, toFormData} from '@/_helpers';
 // import {useDispatch, useSelector} from 'react-redux';
@@ -14,7 +15,7 @@ import React, {memo, useCallback, useEffect, useRef, useState} from 'react';
 // import DragAndDrop from '@/_components/DragAndDrop';
 
 // import FileIcon from '../../../../../public/_assets/icons/file.svg';
-import FullscreenModal from '../..';
+// import FullscreenModal from '../..';
 
 // const contentTypes = [
 //    {id: 1, title: 'Video'},

@@ -1,12 +1,11 @@
-import {Layout} from '@/_components';
-import Title from '@/_components/Title';
+import {Layout, Title} from '@/_components';
 import React from 'react';
 
 const Resume = () => {
    const resumeData =
       'https://www.canva.com/design/DAF8t3biXeE/Ae3G6vCsOuvdFFk_q16Tmw/view?utm_content=DAF8t3biXeE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink';
 
-   const previewData = `${ resumeData.substr(0, resumeData.lastIndexOf('/') + 1) }view?embed`;
+   const previewData = `${resumeData.substr(0, resumeData.lastIndexOf('/') + 1)}view?embed`;
 
    return (
       <Layout title="Resume" className="about__section projects__section py-lg-5 py-4">

@@ -1,10 +1,8 @@
-import {TextInput, TextArea} from '@/_components/CustomInput';
-import Title from '@/_components/Title';
-import React, {useRef} from 'react';
-import emailjs from '@emailjs/browser';
+import {Layout, TextArea, TextInput, Title} from '@/_components';
 import {AppEmitter} from '@/_controllers/EventEmitter';
+import emailjs from '@emailjs/browser';
 import {toast} from 'react-toastify';
-import {Layout} from '@/_components';
+import React, {useRef} from 'react';
 
 const Contact = () => {
    const form = useRef();

@@ -1,31 +1,15 @@
 import {footerLabel, footerLink, getLocationName, useRoutesCode} from '@/_utils';
 import {Footer, Navbar} from '@/_navigation';
-import classNames from 'classnames';
-import React, {memo, useContext, useEffect, useState} from 'react';
+import React, {memo, useEffect} from 'react';
 import SkipToContent from '../SkipToContent';
-import Head from 'next/head';
 import {useRouter} from 'next/router';
-import AppContext from '@/_utils/context';
-import {keepTheme} from '@/_utils/theme';
+import classNames from 'classnames';
+import Head from 'next/head';
 
 // eslint-disable-next-line react/display-name
 const Layout = memo(({children, title, className, ...rest}) => {
    const router = useRouter();
    const code = useRoutesCode();
-   // const [show, setShow] = useState(true);
-   // const [lastScrollY, setLastScrollY] = useState(0);
-   // const {theme, loadTheme, show, setTheme} = useContext(AppContext);
-
-   // useEffect(() => {
-   //    // logPage();
-   //    loadTheme();
-   // }, [loadTheme]);
-
-   const [themeClassName, setClassName] = useState('theme-dark');
-
-   useEffect(() => {
-      keepTheme(setClassName);
-   }, [setClassName]);
 
    useEffect(() => {
       const cursorChange = document.querySelector('.mouse__handle');
@@ -43,11 +27,8 @@ const Layout = memo(({children, title, className, ...rest}) => {
    }, []);
 
    // useEffect(() => {
-   //    console.log(`current ScrollPos=====>`);
    //    const controlNavbar = () => {
    //       const currentScrollPos = window.scrollY;
-   //       console.log(`current ScrollPos=====>`, currentScrollPos);
-
    //       if ((lastScrollY > currentScrollPos && lastScrollY - currentScrollPos > 70) || currentScrollPos < 10) {
    //          setShow(true);
    //       } else {
@@ -62,7 +43,7 @@ const Layout = memo(({children, title, className, ...rest}) => {
    // }, [lastScrollY]);
 
    return (
-      <main className={`main__wrapper ${themeClassName}`}>
+      <main className={`main__wrapper`}>
          <Head>
             <title>{`${title} | Goodnews Ogechukwu Ike | goo.dev`}</title>
             {/* <meta name="msapplication-TileColor" content={`${theme ? '#000000' : '#FFFFFF'}`} />
@@ -81,7 +62,7 @@ const Layout = memo(({children, title, className, ...rest}) => {
             <div className="mouse__handle" />
             <div className="PageLayout__Contents">
                <SkipToContent content="main-content" />
-               <Navbar setClassName={setClassName} />
+               <Navbar />
                <div className="container">
                   <div className="row m-0 align-items-center justify-content-center">
                      <div className="col-md-10 px-0">

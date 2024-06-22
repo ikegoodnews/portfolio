@@ -3,20 +3,14 @@ import 'react-toastify/dist/ReactToastify.css';
 import '@/styles/index.scss';
 import '@/styles/globals.scss';
 import {useEffect, useState} from 'react';
-import {ToastContainer} from 'react-toastify';
-import AppContext from '@/_utils/context';
 import {PageTransition} from 'next-page-transitions';
-import {clearObjectFromStorage, getObjectFromStorage, passphrase, setObjectInStorage} from '@/_utils/storage';
+// import {ToastContainer} from 'react-toastify';
 
 if (process.env.NODE_ENV !== 'development') {
    console.log = () => {};
 }
 
 export default function App({Component, pageProps}) {
-   const [show, setShow] = useState(false);
-   // const [theme, setTheme] = useState(getObjectFromStorage(passphrase)); // getStorageValue ? true : false
-   // console.log(`theme=====>`, theme);
-
    useEffect(() => {
       // typeof document !== undefined &&
       require('bootstrap/dist/js/bootstrap.js');
@@ -44,40 +38,6 @@ export default function App({Component, pageProps}) {
    //    }
    // }, []);
 
-   // const loadTheme = () => {
-   //    if (theme === '') {
-   //       clearObjectFromStorage(passphrase);
-   //    } else {
-   //       setObjectInStorage(passphrase, 'dark');
-   //    }
-   // };
-
-   // useEffect(() => {
-   //    if (theme === 'dark') {}
-   //    if (theme === 'light') {}
-   // }, [theme]);
-
-   const handleOpen = () => {
-      setShow(true);
-   };
-
-   // const handleTheme = (mode) => {
-   //    // setTheme((prev) => !prev);
-   //    setObjectInStorage(passphrase, mode);
-   //    if (theme === 'dark')
-   //    {
-   //       setTheme('light')
-   //    }
-   //    if (theme === 'light')
-   //    {
-   //       setTheme('dark')
-   //    }
-   // };
-
-   const closeShow = () => {
-      setShow(false);
-   };
-
    return (
       <>
          <PageTransition timeout={200} classNames="page-transition" loadingDelay={100}>
@@ -92,7 +52,7 @@ export default function App({Component, pageProps}) {
                   closeShow: closeShow,
                }}> */}
             <Component {...pageProps} />
-            <ToastContainer />
+            {/* <ToastContainer /> */}
             {/* </AppContext.Provider> */}
          </PageTransition>
       </>

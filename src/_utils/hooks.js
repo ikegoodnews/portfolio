@@ -42,8 +42,6 @@ export const useRoutesCode = () => {
    const {asPath, pathname, query} = useRouter();
 
    const home = pathname === '/' || pathname.includes('/home') || pathname === '/#!';
-   // const home2 = pathname === '/#!';
-   // const home3 = pathname === '/home';
    const about = pathname.includes('/about');
    const projects = pathname.includes('/projects');
    const services = pathname.includes('/resume');

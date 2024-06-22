@@ -1,8 +1,5 @@
-import {Layout} from '@/_components';
 import Title from '@/_components/Title';
-// import {aboutCards, techStacks} from '@/_constants';
-// import {numToString} from '@/_utils';
-// import classNames from 'classnames';
+import {Layout} from '@/_components';
 import Link from 'next/link';
 import React from 'react';
 
@@ -37,38 +34,6 @@ const About = () => {
                   opportunities to work together!
                </li>
             </ul>
-
-            {/* <div className="row mt-md-5 mt-4">
-               {aboutCards?.map((card, i) => (
-                  <div key={i} className="col-lg-3 col-md-4 col-sm-6 mb-4 px-3">
-                     <div className="overview__card h-100 py-4 px-lg-5 px-4">
-                        <i className={classNames(`icon__wrapper ${card.icon}`, numToString(i + 1, true))} aria-hidden="true"></i>
-                        <h5 className="overview__card--title mt-4 mb-3">{card.label}</h5>
-                     </div>
-                  </div>
-               ))}
-            </div> */}
-
-            {/* <div className="techs__used mt-5 overflow-hidden">
-               <div className="d-flex align-items-center mb-4">
-                  {techStacks?.map((stack, i) => (
-                     <div key={i} className="stack me-4">
-                        {stack}
-                     </div>
-                  ))}
-               </div>
-               <div className="d-flex align-items-center">
-                  {techStacks?.map((stack, i) => (
-                     <div key={i} className="stack me-4">
-                        {stack}
-                     </div>
-                  ))}
-               </div>
-               <div className="nav__container__2">
-                  <button className="prev"></button>
-                  <button className="next"></button>
-               </div>
-            </div> */}
          </div>
       </Layout>
    );

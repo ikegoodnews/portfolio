@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {withFormsy} from 'formsy-react';
+// import {withFormsy} from 'formsy-react';
 import classNames from 'classnames';
 // import PropTypes from 'prop-types';
 
 /// ICON IMPORTS ///
-import ErrorIcon from '../../../public/_assets/icons/Error.svg';
 import {AppEmitter} from '@/_controllers/EventEmitter';
 
 export const TextArea = (props) => {

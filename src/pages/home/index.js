@@ -1,4 +1,5 @@
-import Layout from '@/_components/Layout';
+// import Layout from '@/_components/Layout';
+import {Layout} from '@/_components';
 import React from 'react';
 
 const Home = () => {
