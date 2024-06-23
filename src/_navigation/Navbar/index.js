@@ -57,7 +57,7 @@ const Navbar = memo(() => {
                            <li key={`menuItem-${i}`} className="text-capitalize ms-lg-4 mb-lg-0 mb-3">
                               <Link
                                  href={item.link}
-                                 onClick={closeShow}
+                                 // onClick={closeShow}
                                  aria-label={item.label}
                                  title={item.label}
                                  className={classNames('d-flex h-100 p-2', {active: activeRoute(item.link)})}>
