@@ -8,6 +8,11 @@
          color: var(--color-3);
          position: relative;
          letter-spacing: 9.9px;
+         span {
+         }
+         @media (max-width: 575px) {
+            font-size: 1.3rem;
+         }
       }
       .description {
          color: var(--color-3);
