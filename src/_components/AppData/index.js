@@ -1,52 +1,27 @@
-import project1 from '../../../public/_assets/images/project1.jpg';
+import waystream from '../../../public/_assets/images/waystream.png';
+import portfolio from '../../../public/_assets/images/portfolio.png';
+import lagosteahouse from '../../../public/_assets/images/lagosteahouse.png';
 
 export const PROJECTS = [
    {
       id: 1,
-      img: project1,
-      title: 'project 1',
-      date: Date.now(),
-      description:
-         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus eligendi et veritatis corrupti voluptatibus quidem quibusdam culpa accusantium? Mollitia quidem, aperiam quae quibusdam deserunt laudantium enim id eum, maxime eius, dolorem fugit vel praesentium suscipit recusandae? Fuga dolor obcaecati beatae, laudantium nostrum qui. Sapiente nesciunt illo reiciendis qui dolor dicta incidunt suscipit placeat? Rerum eos ratione dolore, eveniet rem eius saepe maxime atque veniam labore similique doloremque necessitatibus quos dicta eum doloribus sed. In doloremque eos hic perferendis amet officiis accusamus optio expedita, quam esse tempora! Blanditiis laboriosam cum quod ipsa aut dolor ipsam inventore totam? Placeat, minima tenetur? Facilis asperiores reiciendis architecto nobis perspiciatis in? Culpa possimus molestiae quam reiciendis dolorum excepturi fuga, saepe neque minus inventore unde ducimus quisquam nisi facere pariatur. Mollitia beatae consequatur ipsum magnam quam commodi, velit placeat eum laborum, modi quas blanditiis sunt eaque, temporibus cum laudantium rerum ducimus quisquam amet pariatur quae? Placeat incidunt ducimus repellat dolorem consectetur, impedit doloribus quidem laudantium qui quaerat excepturi aut, natus totam dolore sunt voluptas sapiente temporibus quia officiis fugiat. Tenetur culpa placeat sunt ut facilis, tempora in iste illum doloribus at ducimus maxime perspiciatis officia minima nemo laborum eaque quis quod optio ea provident. Eum at quam doloremque pariatur impedit fugit vero doloribus atque officiis odio velit nam sit rem, nulla reprehenderit libero est debitis neque repudiandae, adipisci unde obcaecati autem ullam. Saepe, quis laboriosam! Doloremque impedit delectus nostrum fugit reiciendis, sed aspernatur! Eaque esse, temporibus obcaecati deleniti nulla, at minima provident harum beatae sequi dolore.',
+      img: waystream,
+      title: 'Waystream HQ',
+      techStacks: ['Next.js', 'Electron.js', 'Firebase', 'Hls.js', 'Redux-saga'],
+      description: 'Live audio streaming and podcast platform.',
    },
    {
       id: 2,
-      img: project1,
-      title: 'project 1',
-      date: Date.now(),
-      description:
-         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus eligendi et veritatis corrupti voluptatibus quidem quibusdam culpa accusantium? Mollitia quidem, aperiam quae quibusdam deserunt laudantium enim id eum, maxime eius, dolorem fugit vel praesentium suscipit recusandae? Fuga dolor obcaecati beatae, laudantium nostrum qui. Sapiente nesciunt illo reiciendis qui dolor dicta incidunt suscipit placeat? Rerum eos ratione dolore, eveniet rem eius saepe maxime atque veniam labore similique doloremque necessitatibus quos dicta eum doloribus sed. In doloremque eos hic perferendis amet officiis accusamus optio expedita, quam esse tempora! Blanditiis laboriosam cum quod ipsa aut dolor ipsam inventore totam? Placeat, minima tenetur? Facilis asperiores reiciendis architecto nobis perspiciatis in? Culpa possimus molestiae quam reiciendis dolorum excepturi fuga, saepe neque minus inventore unde ducimus quisquam nisi facere pariatur. Mollitia beatae consequatur ipsum magnam quam commodi, velit placeat eum laborum, modi quas blanditiis sunt eaque, temporibus cum laudantium rerum ducimus quisquam amet pariatur quae? Placeat incidunt ducimus repellat dolorem consectetur, impedit doloribus quidem laudantium qui quaerat excepturi aut, natus totam dolore sunt voluptas sapiente temporibus quia officiis fugiat. Tenetur culpa placeat sunt ut facilis, tempora in iste illum doloribus at ducimus maxime perspiciatis officia minima nemo laborum eaque quis quod optio ea provident. Eum at quam doloremque pariatur impedit fugit vero doloribus atque officiis odio velit nam sit rem, nulla reprehenderit libero est debitis neque repudiandae, adipisci unde obcaecati autem ullam. Saepe, quis laboriosam! Doloremque impedit delectus nostrum fugit reiciendis, sed aspernatur! Eaque esse, temporibus obcaecati deleniti nulla, at minima provident harum beatae sequi dolore.',
+      img: lagosteahouse,
+      title: 'Lagos Tea House',
+      techStacks: ['React.js', 'Redux/Redux-saga', 'Bootstrap', 'CKEditor'],
+      description: 'Lagos Tea House is a contemporary café and restaurant.',
    },
    {
       id: 3,
-      img: project1,
-      title: 'project 1',
-      date: Date.now(),
-      description:
-         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus eligendi et veritatis corrupti voluptatibus quidem quibusdam culpa accusantium? Mollitia quidem, aperiam quae quibusdam deserunt laudantium enim id eum, maxime eius, dolorem fugit vel praesentium suscipit recusandae? Fuga dolor obcaecati beatae, laudantium nostrum qui. Sapiente nesciunt illo reiciendis qui dolor dicta incidunt suscipit placeat? Rerum eos ratione dolore, eveniet rem eius saepe maxime atque veniam labore similique doloremque necessitatibus quos dicta eum doloribus sed. In doloremque eos hic perferendis amet officiis accusamus optio expedita, quam esse tempora! Blanditiis laboriosam cum quod ipsa aut dolor ipsam inventore totam? Placeat, minima tenetur? Facilis asperiores reiciendis architecto nobis perspiciatis in? Culpa possimus molestiae quam reiciendis dolorum excepturi fuga, saepe neque minus inventore unde ducimus quisquam nisi facere pariatur. Mollitia beatae consequatur ipsum magnam quam commodi, velit placeat eum laborum, modi quas blanditiis sunt eaque, temporibus cum laudantium rerum ducimus quisquam amet pariatur quae? Placeat incidunt ducimus repellat dolorem consectetur, impedit doloribus quidem laudantium qui quaerat excepturi aut, natus totam dolore sunt voluptas sapiente temporibus quia officiis fugiat. Tenetur culpa placeat sunt ut facilis, tempora in iste illum doloribus at ducimus maxime perspiciatis officia minima nemo laborum eaque quis quod optio ea provident. Eum at quam doloremque pariatur impedit fugit vero doloribus atque officiis odio velit nam sit rem, nulla reprehenderit libero est debitis neque repudiandae, adipisci unde obcaecati autem ullam. Saepe, quis laboriosam! Doloremque impedit delectus nostrum fugit reiciendis, sed aspernatur! Eaque esse, temporibus obcaecati deleniti nulla, at minima provident harum beatae sequi dolore.',
-   },
-   {
-      id: 4,
-      img: project1,
-      title: 'project 1',
-      date: Date.now(),
-      description:
-         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus eligendi et veritatis corrupti voluptatibus quidem quibusdam culpa accusantium? Mollitia quidem, aperiam quae quibusdam deserunt laudantium enim id eum, maxime eius, dolorem fugit vel praesentium suscipit recusandae? Fuga dolor obcaecati beatae, laudantium nostrum qui. Sapiente nesciunt illo reiciendis qui dolor dicta incidunt suscipit placeat? Rerum eos ratione dolore, eveniet rem eius saepe maxime atque veniam labore similique doloremque necessitatibus quos dicta eum doloribus sed. In doloremque eos hic perferendis amet officiis accusamus optio expedita, quam esse tempora! Blanditiis laboriosam cum quod ipsa aut dolor ipsam inventore totam? Placeat, minima tenetur? Facilis asperiores reiciendis architecto nobis perspiciatis in? Culpa possimus molestiae quam reiciendis dolorum excepturi fuga, saepe neque minus inventore unde ducimus quisquam nisi facere pariatur. Mollitia beatae consequatur ipsum magnam quam commodi, velit placeat eum laborum, modi quas blanditiis sunt eaque, temporibus cum laudantium rerum ducimus quisquam amet pariatur quae? Placeat incidunt ducimus repellat dolorem consectetur, impedit doloribus quidem laudantium qui quaerat excepturi aut, natus totam dolore sunt voluptas sapiente temporibus quia officiis fugiat. Tenetur culpa placeat sunt ut facilis, tempora in iste illum doloribus at ducimus maxime perspiciatis officia minima nemo laborum eaque quis quod optio ea provident. Eum at quam doloremque pariatur impedit fugit vero doloribus atque officiis odio velit nam sit rem, nulla reprehenderit libero est debitis neque repudiandae, adipisci unde obcaecati autem ullam. Saepe, quis laboriosam! Doloremque impedit delectus nostrum fugit reiciendis, sed aspernatur! Eaque esse, temporibus obcaecati deleniti nulla, at minima provident harum beatae sequi dolore.',
-   },
-   {
-      id: 5,
-      img: project1,
-      title: 'project 5',
-      date: Date.now(),
-      description:
-         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus eligendi et veritatis corrupti voluptatibus quidem quibusdam culpa accusantium? Mollitia quidem, aperiam quae quibusdam deserunt laudantium enim id eum, maxime eius, dolorem fugit vel praesentium suscipit recusandae? Fuga dolor obcaecati beatae, laudantium nostrum qui. Sapiente nesciunt illo reiciendis qui dolor dicta incidunt suscipit placeat? Rerum eos ratione dolore, eveniet rem eius saepe maxime atque veniam labore similique doloremque necessitatibus quos dicta eum doloribus sed. In doloremque eos hic perferendis amet officiis accusamus optio expedita, quam esse tempora! Blanditiis laboriosam cum quod ipsa aut dolor ipsam inventore totam? Placeat, minima tenetur? Facilis asperiores reiciendis architecto nobis perspiciatis in? Culpa possimus molestiae quam reiciendis dolorum excepturi fuga, saepe neque minus inventore unde ducimus quisquam nisi facere pariatur. Mollitia beatae consequatur ipsum magnam quam commodi, velit placeat eum laborum, modi quas blanditiis sunt eaque, temporibus cum laudantium rerum ducimus quisquam amet pariatur quae? Placeat incidunt ducimus repellat dolorem consectetur, impedit doloribus quidem laudantium qui quaerat excepturi aut, natus totam dolore sunt voluptas sapiente temporibus quia officiis fugiat. Tenetur culpa placeat sunt ut facilis, tempora in iste illum doloribus at ducimus maxime perspiciatis officia minima nemo laborum eaque quis quod optio ea provident. Eum at quam doloremque pariatur impedit fugit vero doloribus atque officiis odio velit nam sit rem, nulla reprehenderit libero est debitis neque repudiandae, adipisci unde obcaecati autem ullam. Saepe, quis laboriosam! Doloremque impedit delectus nostrum fugit reiciendis, sed aspernatur! Eaque esse, temporibus obcaecati deleniti nulla, at minima provident harum beatae sequi dolore.',
-   },
-   {
-      id: 6,
-      img: project1,
-      title: 'project 6',
-      date: Date.now(),
-      description:
-         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus eligendi et veritatis corrupti voluptatibus quidem quibusdam culpa accusantium? Mollitia quidem, aperiam quae quibusdam deserunt laudantium enim id eum, maxime eius, dolorem fugit vel praesentium suscipit recusandae? Fuga dolor obcaecati beatae, laudantium nostrum qui. Sapiente nesciunt illo reiciendis qui dolor dicta incidunt suscipit placeat? Rerum eos ratione dolore, eveniet rem eius saepe maxime atque veniam labore similique doloremque necessitatibus quos dicta eum doloribus sed. In doloremque eos hic perferendis amet officiis accusamus optio expedita, quam esse tempora! Blanditiis laboriosam cum quod ipsa aut dolor ipsam inventore totam? Placeat, minima tenetur? Facilis asperiores reiciendis architecto nobis perspiciatis in? Culpa possimus molestiae quam reiciendis dolorum excepturi fuga, saepe neque minus inventore unde ducimus quisquam nisi facere pariatur. Mollitia beatae consequatur ipsum magnam quam commodi, velit placeat eum laborum, modi quas blanditiis sunt eaque, temporibus cum laudantium rerum ducimus quisquam amet pariatur quae? Placeat incidunt ducimus repellat dolorem consectetur, impedit doloribus quidem laudantium qui quaerat excepturi aut, natus totam dolore sunt voluptas sapiente temporibus quia officiis fugiat. Tenetur culpa placeat sunt ut facilis, tempora in iste illum doloribus at ducimus maxime perspiciatis officia minima nemo laborum eaque quis quod optio ea provident. Eum at quam doloremque pariatur impedit fugit vero doloribus atque officiis odio velit nam sit rem, nulla reprehenderit libero est debitis neque repudiandae, adipisci unde obcaecati autem ullam. Saepe, quis laboriosam! Doloremque impedit delectus nostrum fugit reiciendis, sed aspernatur! Eaque esse, temporibus obcaecati deleniti nulla, at minima provident harum beatae sequi dolore.',
+      img: portfolio,
+      title: 'my portfolio',
+      techStacks: ['Next.js', 'Bootstrap', 'SASS/SCSS', 'Email.Js', 'Formspree'],
+      description: 'Minimalistic design portfolio',
    },
 ];
