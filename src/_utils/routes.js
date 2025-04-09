@@ -45,7 +45,7 @@ export const footerLink = (num) => {
       case 4:
          return '/contact';
       case 5:
-         return '/home';
+         return '/';
       default:
          return '';
    }

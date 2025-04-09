@@ -45,9 +45,36 @@ const Layout = memo(({children, title, className, ...rest}) => {
    return (
       <main className={`main__wrapper`}>
          <Head>
-            <title>{`${title} | Goodnews Ogechukwu Ike | goo.dev`}</title>
+            <title>{`${title} | Goodnews Ogechukwu Ike`}</title>
             {/* <meta name="msapplication-TileColor" content={`${theme ? '#000000' : '#FFFFFF'}`} />
             <meta name="theme-color" content={`${theme ? '#000000' : '#FFFFFF'}`} /> */}
+            <link rel="shortcut icon" href="/favicon.ico" />
+            <link rel="icon" href="/favicon.ico" />
+            <meta property="og:url" content="https://https://goodnews-ike.vercel.app" />
+            <meta property="og:title" content="Goodnews Ike Portfolio Website" />
+            <meta
+               property="og:description"
+               content="Goodnews Ike - Results-driven Software Engineer with 5 years of experience in designing, developing, and optimizing high-performance web applications. Adept at using React.js, Next.js, Typescript, Flutter, and state management libraries, with hands-on expertise in CI/CD automation using Bitbucket Pipelines. Currently contributing to innovative fintech solutions, improving product scalability and security. Passionate about transitioning into Product Management to drive technology-driven business growth." />
+            <meta name="author" content="Goodnews Ogechukwu Ike" />
+            <meta name="keywords" content="Goodnews Ogechukwu Ike, software engineer, software developer, frontend engineer, frontend, engineer, developer" />
+            <meta property="og:type" content="website" />
+            <meta property="og:locale" content="en-US" />
+            <meta property="og:type" content="website" />
+            <meta name="description" content="Hi, I&#x27;m Goodnews Ogechukwu Ike, Software Engineer." />
+            <meta property="og:description" content="Hi, I&#x27;m Goodnews Ogechukwu Ike, Software Engineer." />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="mobile-web-app-capable" content="yes" />
+            <meta name="twitter:site" content="@goodnews_ike" />
+            <meta name="instagram:site" content="@ikegoodnewsofficial" />
+            <meta name="linkedin:site" content="@ikegoodnews" />
+            <meta name="github:site" content="@ikegoodnews" />
+            <meta name="facebook:site" content="@goodnewsikeogeh" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+            <meta name="robots" content="index, nofollow" />
+            <link rel="manifest" href="/manifest.json" />
+            <meta property="og:title" content="Goodnews Ogechukwu Ike" />
+            <meta property="og:url" content="https://goodnews-ike.vercel.app" />
+            <meta name="apple-mobile-web-app-title" content="Goodnews Ogechukwu Ike" />
             <link
                rel="stylesheet"
                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"

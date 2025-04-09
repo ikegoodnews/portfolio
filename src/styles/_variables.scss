@@ -61,28 +61,28 @@ $box-shadow-inset: inset 0px 2px 18px rgba(var(--color-4), 0.1);
    --theme-amount: 1;
 }
 
-@media (prefers-color-scheme: dark) {
-   :root {
-      --color-1: #0b0c10;
-      --color-1a: #0b0c1098;
-      --color-11: #060709;
-      --color-2: #1f2833;
-      --color-3: #c5c6c7;
-      --color-4: #66fcf1;
-      --color-4a: #66fcf198;
-      --color-5: #45a29e;
-      --color-5a: #45a29e98;
-      --color-6: rgba(255, 255, 255, 0.1);
-      --color-7: rgba(9, 20, 40, 0.74);
-      --color-8: rgba(9, 20, 40, 1);
-      --color-9: #020a13;
-      --color-10: #080f18;
-      --color-12: #e1e1e1;
-      --color-13: #c6c6c6;
+// @media (prefers-color-scheme: dark) {
+html.dark {
+   --color-1: color-mix(in srgb, #0b0c10 70%, white);
+   --color-1a: color-mix(in srgb, #0b0c1098 70%, white);
+   --color-11: color-mix(in srgb, #060709 70%, white);
+   --color-2: color-mix(in srgb, #1f2833 70%, white);
+   --color-3: color-mix(in srgb, #c5c6c7 70%, white);
+   --color-4: color-mix(in srgb, #66fcf1 70%, white);
+   --color-4a: color-mix(in srgb, #66fcf198 70%, white);
+   --color-5: color-mix(in srgb, #45a29e 70%, white);
+   --color-5a: color-mix(in srgb, #45a29e98 70%, white);
+   --color-6: color-mix(in srgb, rgba(255, 255, 255, 0.1) 70%, white);
+   --color-7: color-mix(in srgb, rgba(9, 20, 40, 0.74) 70%, white);
+   --color-8: color-mix(in srgb, rgba(9, 20, 40, 1) 70%, white);
+   --color-9: color-mix(in srgb, #020a13 70%, white);
+   --color-10: color-mix(in srgb, #080f18 70%, white);
+   --color-12: color-mix(in srgb, #1d1d1d 70%, white);
+   --color-13: color-mix(in srgb, #c6c6c6 70%, white);
 
-      --theme-amount: 0;
-   }
+   --theme-amount: 0;
 }
+// }
 
 // body {
 //    color: rgb(var(--foreground-rgb));

@@ -1,15 +1,17 @@
-import {useOnClickOutside} from '@/_utils';
 import React, {memo, useCallback, useRef} from 'react';
-import {menuDrop} from '@/_constants';
 import {useRouter} from 'next/router';
 import classNames from 'classnames';
-import {Moon} from '@/_components';
 import Link from 'next/link';
+
+import ThemeToggle from '@/_components/Theme';
+import {useOnClickOutside} from '@/_utils';
+import {menuDrop} from '@/_constants';
 
 // eslint-disable-next-line react/display-name
 const Navbar = memo(() => {
-   const router = useRouter();
    const menuDropRef = useRef();
+   const router = useRouter();
+   console.log("🚀 ~ Navbar ~ router:", router)
 
    const activeRoute = useCallback(
       (link) => {
@@ -27,7 +29,7 @@ const Navbar = memo(() => {
          <div className="container-fluid d-flex align-items-center">
             <div className="container px-0 position-relative d-flex align-items-center justify-content-between">
                <Link
-                  href="/home"
+                  href="/"
                   // tabIndex={show ? -1 : undefined}
                >
                   <div className="logo">G.I.</div>
@@ -52,7 +54,7 @@ const Navbar = memo(() => {
                   </button> */}
                   <ul className="navbar-nav ms-auto flex-row nav__list d-flex align-items-center">
                      {menuDrop
-                        ?.filter((obj) => !obj.link.includes(router.pathname))
+                        ?.filter((obj) => router.asPath !== '/' && !obj.link.includes(router.asPath))
                         ?.map((item, i) => (
                            <li key={`menuItem-${i}`} className="text-capitalize ms-lg-4 mb-lg-0 mb-3">
                               <Link
@@ -66,14 +68,7 @@ const Navbar = memo(() => {
                            </li>
                         ))}
                      <li className="text-capitalize ms-lg-4 ps-lg-3">
-                        <span
-                           // href={'#!'}
-                           // aria-label={`Turn On ${theme === false ? 'Light' : 'Dark'} Mood`}
-                           // data-theme={`${theme === false ? 'light' : 'dark'}`}
-                           // onClick={changeThemeAndToggle}
-                           className="d-flex h-100">
-                           <Moon />
-                        </span>
+                        <ThemeToggle />
                      </li>
                   </ul>
                </div>

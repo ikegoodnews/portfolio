@@ -1,4 +1,3 @@
-// import Layout from '@/_components/Layout';
 import {Layout} from '@/_components';
 import React from 'react';
 
@@ -9,10 +8,13 @@ const Home = () => {
             <h1 className="name pt-1 text-uppercase">
                I&apos;m <span className="text-nowrap">goodnews ike</span>
             </h1>
-            <p className="description py-3">
-               Highly proficient software developer with over 3 years of professional experience in developing robust and scalable web applications.
-               My expertise lies in full-stack development with a keen focus on front-end technologies and user experience. I am committed to
-               continuous learning and applying new technologies to solve complex problems.
+            <p className="description">
+               Results-driven Software Engineer with 5 years of experience in designing, developing, 
+               and optimizing high-performance web applications. Adept at using React.js, Next.js, 
+               Typescript, Flutter, and state management libraries, with hands-on expertise in 
+               CI/CD automation using Bitbucket Pipelines. Currently contributing to innovative 
+               fintech solutions, improving product scalability and security. Passionate about 
+               transitioning into Product Management to drive technology-driven business growth.
             </p>
          </div>
       </Layout>

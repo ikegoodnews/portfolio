@@ -8,18 +8,18 @@ export default function Document(props) {
             {/* <title>{`${props.title} | Goodnews Ogechukwu Ike | goo.dev`}</title> */}
             <link rel="shortcut icon" href="/favicon.ico" />
             <link rel="icon" href="/favicon.ico" />
-            <meta property="og:url" content="https://goo.dev/" />
+            <meta property="og:url" content="https://goodnews-ike.vercel.app" />
             <meta property="og:title" content="Goodnews Ike Portfolio Website" />
             <meta
                property="og:description"
-               content="Goodnews Ike - Highly skilled software developer with years of experience delivering innovative and impactful digital solutions to businesses. Seeking to advance as a software engineer with your reputable organization." />
-            <meta property="og:type" content="website" />
+               content="Goodnews Ike - Results-driven Software Engineer with 5 years of experience in designing, developing, and optimizing high-performance web applications. Adept at using React.js, Next.js, Typescript, Flutter, and state management libraries, with hands-on expertise in CI/CD automation using Bitbucket Pipelines. Currently contributing to innovative fintech solutions, improving product scalability and security. Passionate about transitioning into Product Management to drive technology-driven business growth." />
             <meta name="author" content="Goodnews Ogechukwu Ike" />
-            <meta name="keywords" content="Goodnews Ogechukwu Ike, software developer, frontend engineer, frontend, developer" />
+            <meta name="keywords" content="Goodnews Ogechukwu Ike, software engineer, software developer, frontend engineer, frontend, engineer, developer" />
+            <meta property="og:type" content="website" />
             <meta property="og:locale" content="en-US" />
             <meta property="og:type" content="website" />
-            <meta name="description" content="Hi, I&#x27;m Goodnews Ogechukwu Ike, Software Developer." />
-            <meta property="og:description" content="Hi, I&#x27;m Goodnews Ogechukwu Ike, Software Developer." />
+            <meta name="description" content="Hi, I&#x27;m Goodnews Ogechukwu Ike, Software Engineer." />
+            <meta property="og:description" content="Hi, I&#x27;m Goodnews Ogechukwu Ike, Software Engineer." />
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="mobile-web-app-capable" content="yes" />
             <meta name="twitter:site" content="@goodnews_ike" />
@@ -31,7 +31,7 @@ export default function Document(props) {
             <meta name="robots" content="index, nofollow" />
             <link rel="manifest" href="/manifest.json" />
             <meta property="og:title" content="Goodnews Ogechukwu Ike" />
-            <meta property="og:url" content="https://goo.dev" />
+            <meta property="og:url" content="https://goodnews-ike.vercel.app" />
             <meta name="apple-mobile-web-app-title" content="Goodnews Ogechukwu Ike" />
             <link
                rel="stylesheet"
