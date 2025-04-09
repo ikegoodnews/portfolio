@@ -11,7 +11,7 @@ import {menuDrop} from '@/_constants';
 const Navbar = memo(() => {
    const menuDropRef = useRef();
    const router = useRouter();
-   console.log("🚀 ~ Navbar ~ router:", router)
+   // console.log("🚀 ~ Navbar ~ router:", router)
 
    const activeRoute = useCallback(
       (link) => {
