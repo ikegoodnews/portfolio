@@ -8,10 +8,10 @@ const Projects = () => {
       <Layout title="Projects" className="about__section projects__section py-lg-5 py-4">
          <div className="w-100">
             <Title label="my work" title="projects" />
-            <div className="row mt-5 gx-5">
+            <div className="forProjectCard mt-5 gx-5">
                {PROJECTS?.map((project, i) => (
-                  <div key={i} className="col-lg-6 mb-md-5 mb-4 position-relative">
-                     <div className="projectCard h-100">
+                  <div key={i} className="projectCard position-relative">
+                  {/* <div key={i} className="col-lg-6 mb-md-5 mb-4 position-relative"> */}
                         <div className="img_wrapper">
                            {/* <iframe src="https://app.waystream.io" frameborder="0" className="h-100 w-100"></iframe> */}
                            <Image
@@ -47,7 +47,7 @@ const Projects = () => {
                               </div>
                            </div>
                         </div>
-                     </div>
+                  {/* </div> */}
                   </div>
                ))}
             </div>
