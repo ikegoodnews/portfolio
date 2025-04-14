@@ -30,3 +30,37 @@
 // };
 
 // export default PrivateRoute;
+
+
+
+// USAGE
+// const router = useRouter();
+//   const query = router?.query;
+//   const decodedFrom = decodeURIComponent(
+//     Array.isArray(query?.from) ? query.from[0] : (query?.from ?? '')
+//   );
+
+//   useEffect(() => {
+//     const listener = AppEmitter.addListener(
+//       authConstants.LOGIN_SUCCESS,
+//       (evt: Event) => {
+//         const customEvent = evt as CustomEvent;
+//         const data = customEvent.detail?.data;
+
+//         if (data && decodedFrom?.length) {
+//           router.push({
+//             pathname: decodedFrom,
+//           });
+//           return;
+//         }
+
+//         if (data) {
+//           router.push('/admin/dashboard');
+//           return;
+//         }
+//       }
+//     );
+
+//     return () => listener.remove();
+//     // eslint-disable-next-line react-hooks/exhaustive-deps
+//   }, []);
